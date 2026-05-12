@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jeremy Serfling — Principal PM × AI Builder</title>
+<meta name="description" content="Product Management Leader building agentic AI systems. 15+ years B2B SaaS · Fintech · Healthtech · 2 US patents in NLP and AR." />
+<meta property="og:title" content="Jeremy Serfling — Product Management Leader × AI Builder" />
+<meta property="og:description" content="Product Management Leader with 15+ years in B2B SaaS building agentic AI systems end-to-end." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jeremyserfling.com" />
+<link rel="canonical" href="https://jeremyserfling.com" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content="https://jeremyserfling.com" />
+<meta name="twitter:title" content="Jeremy Serfling — Product Management Leader × AI Builder" />
+<meta name="twitter:description" content="Product Management Leader with 15+ years in B2B SaaS building agentic AI systems end-to-end." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #0a0a0b;
+    --bg-2: #111114;
+    --bg-3: #16161a;
+    --line: #26262d;
+    --line-soft: #1d1d22;
+    --text: #ededee;
+    --text-2: #a1a1aa;
+    --text-3: #6b6b75;
+    --accent: #f5a623;
+    --accent-soft: rgba(245, 166, 35, 0.12);
+    --accent-line: rgba(245, 166, 35, 0.28);
+    --green: #4ade80;
+    --blue: #60a5fa;
+    --purple: #c084fc;
+    --serif: 'Instrument Serif', 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+    --radius: 6px;
+    --maxw: 1200px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(245, 166, 35, 0.06) 0%, transparent 35%),
+      radial-gradient(circle at 85% 50%, rgba(96, 165, 250, 0.04) 0%, transparent 30%);
+    background-attachment: fixed;
+  }
+
+  /* Grain texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  ::selection { background: var(--accent); color: #000; }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 28px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ─────────── NAV ─────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 10, 11, 0.78);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .nav-inner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 18px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 1px;
+    box-shadow: 0 0 12px var(--accent);
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 13px;
+    color: var(--text-2);
+  }
+  .nav-links a {
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta {
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 8px 14px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    transition: all 0.2s;
+  }
+  .nav-cta:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+  }
+
+  /* ─────────── HERO ─────────── */
+  .hero {
+    padding: 120px 0 100px;
+    position: relative;
+  }
+
+  .hero-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(48px, 7.2vw, 104px);
+    font-weight: 400;
+    line-height: 0.96;
+    letter-spacing: -0.03em;
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.1s forwards;
+  }
+
+  /* Hero 2-column grid (text + illustration) */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 980px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .hero-visual { max-width: 360px; margin: 0 auto; }
+  }
+  .hero-visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 400 / 460;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.4s forwards;
+  }
+  .hero-visual svg { width: 100%; height: 100%; display: block; }
+
+  /* Second meta line: 15 years experience */
+  .hero-meta {
+    font-family: var(--sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 6px;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.05s forwards;
+  }
+  /* Third line: location, muted */
+  .hero-loc {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: fadeUp 0.7s ease 0.08s forwards;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-sub {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--text-2);
+    max-width: 660px;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+  .hero-sub strong { color: var(--text); font-weight: 500; }
+
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s ease 0.3s forwards;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--text);
+    font-family: var(--sans);
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+  .btn-primary:hover {
+    background: #ffb733;
+    border-color: #ffb733;
+    transform: translateY(-1px);
+  }
+  .btn:hover {
+    border-color: var(--text-2);
+  }
+  .btn .arrow {
+    transition: transform 0.2s;
+  }
+  .btn:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─────────── STATS STRIP ─────────── */
+  .stats {
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+    background: var(--bg-2);
+    padding: 50px 0;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  .stat-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
+  }
+  .stat-value {
+    font-family: var(--serif);
+    font-size: 44px;
+    line-height: 1;
+    color: var(--text);
+    letter-spacing: -0.02em;
+  }
+  .stat-value .unit {
+    display: block;
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--text-2);
+    margin-left: 0;
+    margin-top: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+  @media (max-width: 800px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  }
+
+  /* ─────────── SECTION HEADERS ─────────── */
+  section { padding: 110px 0; }
+  .section-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-tag::before {
+    content: '';
+    width: 16px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5.5vw, 64px);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin-bottom: 16px;
+  }
+  .section-title em { font-style: italic; color: var(--text-2); }
+  .section-sub {
+    color: var(--text-2);
+    font-size: 17px;
+    max-width: 620px;
+    line-height: 1.6;
+    margin-bottom: 60px;
+  }
+
+  /* ─────────── FEATURED PROJECTS ─────────── */
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  @media (max-width: 880px) {
+    .featured-grid { grid-template-columns: 1fr; }
+  }
+  .featured-card {
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+    border-radius: 10px;
+    padding: 38px 36px 32px;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+  }
+  .featured-card.flagship {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, var(--bg-2) 0%, var(--bg-3) 100%);
+    border-color: var(--accent-line);
+  }
+  .featured-card:hover {
+    border-color: var(--accent-line);
+    transform: translateY(-2px);
+  }
+
+  /* ─── Tile (SVG banner at top of card) ─── */
+  .card-tile {
+    margin: -38px -36px 32px;
+    background: linear-gradient(180deg, #0d0d10 0%, var(--bg-2) 100%);
+    border-bottom: 1px solid var(--line-soft);
+    border-radius: 10px 10px 0 0;
+    padding: 16px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card-tile::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 80% 0%, rgba(245,166,35,0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .card-tile svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .featured-card.flagship .card-tile {
+    margin-bottom: 36px;
+  }
+  @media (max-width: 600px) {
+    .card-tile { padding: 12px 14px; }
+  }
+  .featured-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, var(--accent-soft) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+  }
+  .featured-card:hover::after { opacity: 1; }
+  .featured-card.flagship::after { opacity: 0.6; }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 22px;
+    gap: 16px;
+  }
+  .card-id {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-3);
+    letter-spacing: 0.05em;
+  }
+  .card-status {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 4px 9px;
+    border-radius: 100px;
+    border: 1px solid var(--line);
+    color: var(--text-2);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .card-status.live {
+    color: var(--green);
+    border-color: rgba(74, 222, 128, 0.3);
+    background: rgba(74, 222, 128, 0.05);
+  }
+  .card-status.live::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+    box-shadow: 0 0 8px var(--green);
+  }
+  .card-status.flagship {
+    color: var(--accent);
+    border-color: var(--accent-line);
+    background: var(--accent-soft);
+  }
+  .card-status.building {
+    color: var(--blue);
+    border-color: rgba(96, 165, 250, 0.3);
+    background: rgba(96, 165, 250, 0.05);
+  }
+
+  .card-title {
+    font-family: var(--serif);
+    font-size: 38px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+  }
+  .featured-card.flagship .card-title {
+    font-size: 56px;
+  }
+  .card-title em { font-style: italic; color: var(--accent); }
+
+  .card-tagline {
+    color: var(--text-2);
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+    max-width: 540px;
+  }
+
+  .card-desc {
+    color: var(--text-2);
+    font-size: 14.5px;
+    line-height: 1.65;
+    margin-bottom: 26px;
+  }
+  .card-desc strong { color: var(--text); font-weight: 500; }
+
+  .card-meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 18px;
+    margin-bottom: 26px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line-soft);
+  }
+  .meta-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .meta-value {
+    font-size: 13px;
+    color: var(--text);
+    font-family: var(--mono);
+  }
+
+  .stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 26px;
+  }
+  .stack-item {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 4px 9px;
+    background: var(--bg-3);
+    border: 1px solid var(--line-soft);
+    border-radius: 4px;
+    color: var(--text-2);
+  }
+
+  .card-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .card-link {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-2);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    transition: all 0.2s;
+  }
+  .card-link:hover {
+    color: var(--accent);
+    border-color: var(--accent-line);
+    background: var(--accent-soft);
+  }
+  .card-link .arrow { font-size: 10px; }
+
+  /* ─────────── PROJECT GRID ─────────── */
+  .filter-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 8px 14px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--text-2);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .filter-btn:hover {
+    color: var(--text);
+    border-color: var(--text-3);
+  }
+  .filter-btn.active {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+    font-weight: 600;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 980px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .projects-grid { grid-template-columns: 1fr; } }
+
+  .project-card {
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+    border-radius: 8px;
+    padding: 26px 24px 22px;
+    transition: all 0.25s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+  }
+  .project-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-line);
+    background: var(--bg-3);
+  }
+  .project-card .card-id {
+    margin-bottom: 14px;
+  }
+  .project-card h3 {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+  .project-card .pcat {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+  }
+  .project-card .pdesc {
+    font-size: 13.5px;
+    color: var(--text-2);
+    line-height: 1.55;
+    margin-bottom: auto;
+    padding-bottom: 18px;
+  }
+  .project-card .pstack {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--text-3);
+    padding-top: 14px;
+    border-top: 1px solid var(--line-soft);
+    line-height: 1.6;
+    letter-spacing: 0.02em;
+  }
+  .project-card.hidden { display: none; }
+
+  /* ─────────── ABOUT ─────────── */
+  .about-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  @media (max-width: 880px) {
+    .about-wrap { grid-template-columns: 1fr; gap: 50px; }
+  }
+  .about-text {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text-2);
+  }
+  .about-text p { margin-bottom: 22px; }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-text strong { color: var(--text); font-weight: 500; }
+  .about-quote {
+    font-family: var(--serif);
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    color: var(--text);
+    font-style: italic;
+    padding-left: 24px;
+    border-left: 2px solid var(--accent);
+  }
+  .about-quote span { color: var(--accent); }
+
+  .credentials {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .cred-item {
+    padding: 22px;
+    border: 1px solid var(--line-soft);
+    border-radius: 8px;
+    background: var(--bg-2);
+  }
+  .cred-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+  .cred-value {
+    font-family: var(--serif);
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .cred-detail {
+    font-size: 12.5px;
+    color: var(--text-2);
+    margin-top: 6px;
+  }
+
+  /* ─────────── PHILOSOPHY ─────────── */
+  .philosophy {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line-soft);
+    border: 1px solid var(--line-soft);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  @media (max-width: 880px) {
+    .lessons-grid { grid-template-columns: 1fr; }
+  }
+  .lesson {
+    padding: 32px 28px;
+    background: var(--bg-2);
+    transition: background 0.2s;
+  }
+  .lesson:hover { background: var(--bg-3); }
+  .lesson-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+  }
+  .lesson h4 {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+  .lesson p {
+    color: var(--text-2);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ─────────── CONTACT ─────────── */
+  .contact {
+    text-align: center;
+    padding: 140px 0;
+  }
+  .contact h2 {
+    font-family: var(--serif);
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.03em;
+    margin-bottom: 28px;
+  }
+  .contact h2 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .contact p {
+    font-size: 18px;
+    color: var(--text-2);
+    max-width: 540px;
+    margin: 0 auto 44px;
+    line-height: 1.6;
+  }
+  .contact-actions {
+    display: inline-flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ─────────── FOOTER ─────────── */
+  footer {
+    border-top: 1px solid var(--line-soft);
+    padding: 40px 0;
+    background: var(--bg);
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-text {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-3);
+  }
+  .footer-links {
+    display: flex;
+    gap: 22px;
+  }
+  .footer-links a {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-3);
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--accent); }
+
+  /* ─────────── REVEAL ANIMATIONS ─────────── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<!-- ─────────── NAV ─────────── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">JEREMY.SERFLING</a>
+    <div class="nav-links">
+      <a href="#flagship">Flagship</a>
+      <a href="#projects">All Builds</a>
+      <a href="#about">About</a>
+      <a href="#philosophy">Lessons</a>
+    </div>
+    <a href="#contact" class="nav-cta">Get in touch →</a>
+  </div>
+</nav>
+
+<!-- ─────────── HERO ─────────── -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+
+      <div class="hero-content">
+        <div class="hero-tag">Product Management Leader · Fintech · Healthtech · AI Builder</div>
+        <div class="hero-loc">Twin Cities, MN</div>
+
+        <h1>
+          Product leadership,<br />
+          <em>at AI scale.</em>
+        </h1>
+
+        <p class="hero-sub">
+          Product management leader with <strong>15+ years in B2B SaaS</strong> across fintech and healthtech — building <strong>agentic AI systems</strong> end-to-end. Not prototypes. Not slideware. Real builds running on real infrastructure, demonstrating what a <strong>PM AI builder</strong> looks like when the build barrier collapses.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#flagship" class="btn btn-primary">View flagship builds <span class="arrow">→</span></a>
+          <a href="#contact" class="btn">Let's talk</a>
+        </div>
+      </div>
+
+      <!-- Orchestrator illustration: PM as conductor of agent teams -->
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agentic AI orchestration diagram: a PM directing six AI agent roles (PRD, GTM, Brand, Architecture, Finance, Legal) in a multi-agent product team.">
+          <defs>
+            <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#f5a623" stop-opacity="0.55"/>
+              <stop offset="55%" stop-color="#f5a623" stop-opacity="0.18"/>
+              <stop offset="100%" stop-color="#f5a623" stop-opacity="0"/>
+            </radialGradient>
+            <radialGradient id="satGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#f5a623" stop-opacity="0.22"/>
+              <stop offset="100%" stop-color="#f5a623" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="2.5"/>
+            </filter>
+          </defs>
+
+          <!-- Background concentric rings -->
+          <circle cx="200" cy="200" r="186" fill="none" stroke="rgba(245,166,35,0.035)" stroke-width="1"/>
+          <circle cx="200" cy="200" r="145" fill="none" stroke="rgba(245,166,35,0.05)" stroke-width="1"/>
+          <circle cx="200" cy="200" r="95" fill="none" stroke="rgba(245,166,35,0.08)" stroke-width="1"/>
+
+          <!-- Pulsing emanation ring -->
+          <circle cx="200" cy="200" r="40" fill="none" stroke="#f5a623" stroke-width="1" opacity="0.5">
+            <animate attributeName="r" values="40;170;170" dur="3.6s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;0;0" dur="3.6s" repeatCount="indefinite"/>
+          </circle>
+          <circle cx="200" cy="200" r="40" fill="none" stroke="#f5a623" stroke-width="1" opacity="0.5">
+            <animate attributeName="r" values="40;170;170" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.5;0;0" dur="3.6s" begin="1.8s" repeatCount="indefinite"/>
+          </circle>
+
+          <!-- Connection lines (center → 6 satellites at hex positions, radius 145) -->
+          <g stroke="rgba(245,166,35,0.28)" stroke-width="1" stroke-dasharray="3,5" fill="none">
+            <line x1="200" y1="200" x2="200" y2="55">
+              <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.4s" repeatCount="indefinite"/>
+            </line>
+            <line x1="200" y1="200" x2="325.5" y2="127.5">
+              <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.8s" repeatCount="indefinite"/>
+            </line>
+            <line x1="200" y1="200" x2="325.5" y2="272.5">
+              <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.6s" repeatCount="indefinite"/>
+            </line>
+            <line x1="200" y1="200" x2="200" y2="345">
+              <animate attributeName="stroke-dashoffset" from="16" to="0" dur="2s" repeatCount="indefinite"/>
+            </line>
+            <line x1="200" y1="200" x2="74.5" y2="272.5">
+              <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.5s" repeatCount="indefinite"/>
+            </line>
+            <line x1="200" y1="200" x2="74.5" y2="127.5">
+              <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.9s" repeatCount="indefinite"/>
+            </line>
+          </g>
+
+          <!-- Satellite agent nodes -->
+          <!-- Each: soft glow + dark hex disc + amber outline + label -->
+          <g font-family="JetBrains Mono, monospace" font-size="9.5" font-weight="600" letter-spacing="0.06em" text-anchor="middle">
+
+            <!-- Top: PRD -->
+            <g>
+              <circle cx="200" cy="55" r="42" fill="url(#satGlow)"/>
+              <circle cx="200" cy="55" r="26" fill="#16161a" stroke="#f5a623" stroke-width="1.2" stroke-opacity="0.55">
+                <animate attributeName="stroke-opacity" values="0.4;0.85;0.4" dur="4s" repeatCount="indefinite"/>
+              </circle>
+              <text x="200" y="58.5" fill="#ededee">PRD</text>
+            </g>
+
+            <!-- Top-right: GTM -->
+            <g>
+              <circle cx="325.5" cy="127.5" r="42" fill="url(#satGlow)"/>
+              <circle cx="325.5" cy="127.5" r="26" fill="#16161a" stroke="#f5a623" stroke-width="1.2" stroke-opacity="0.55">
+                <animate attributeName="stroke-opacity" values="0.4;0.85;0.4" dur="4s" begin="0.6s" repeatCount="indefinite"/>
+              </circle>
+              <text x="325.5" y="131" fill="#ededee">GTM</text>
+            </g>
+
+            <!-- Bottom-right: BRAND -->
+            <g>
+              <circle cx="325.5" cy="272.5" r="42" fill="url(#satGlow)"/>
+              <circle cx="325.5" cy="272.5" r="26" fill="#16161a" stroke="#f5a623" stroke-width="1.2" stroke-opacity="0.55">
+                <animate attributeName="stroke-opacity" values="0.4;0.85;0.4" dur="4s" begin="1.2s" repeatCount="indefinite"/>
+              </circle>
+              <text x="325.5" y="276" fill="#ededee">BRAND</text>
+            </g>
+
+            <!-- Bottom: ARCH -->
+            <g>
+              <circle cx="200" cy="345" r="42" fill="url(#satGlow)"/>
+              <circle cx="200" cy="345" r="26" fill="#16161a" stroke="#f5a623" stroke-width="1.2" stroke-opacity="0.55">
+                <animate attributeName="stroke-opacity" values="0.4;0.85;0.4" dur="4s" begin="1.8s" repeatCount="indefinite"/>
+              </circle>
+              <text x="200" y="348.5" fill="#ededee">ARCH</text>
+            </g>
+
+            <!-- Bottom-left: FINANCE -->
+            <g>
+              <circle cx="74.5" cy="272.5" r="42" fill="url(#satGlow)"/>
+              <circle cx="74.5" cy="272.5" r="26" fill="#16161a" stroke="#f5a623" stroke-width="1.2" stroke-opacity="0.55">
+                <animate attributeName="stroke-opacity" values="0.4;0.85;0.4" dur="4s" begin="2.4s" repeatCount="indefinite"/>
+              </circle>
+              <text x="74.5" y="271" fill="#ededee" font-size="8.5">FINANCE</text>
+            </g>
+
+            <!-- Top-left: LEGAL -->
+            <g>
+              <circle cx="74.5" cy="127.5" r="42" fill="url(#satGlow)"/>
+              <circle cx="74.5" cy="127.5" r="26" fill="#16161a" stroke="#f5a623" stroke-width="1.2" stroke-opacity="0.55">
+                <animate attributeName="stroke-opacity" values="0.4;0.85;0.4" dur="4s" begin="3s" repeatCount="indefinite"/>
+              </circle>
+              <text x="74.5" y="131" fill="#ededee">LEGAL</text>
+            </g>
+          </g>
+
+          <!-- Center: PM orchestrator -->
+          <g>
+            <!-- Outer glow disc -->
+            <circle cx="200" cy="200" r="68" fill="url(#centerGlow)"/>
+            <!-- Solid core -->
+            <circle cx="200" cy="200" r="40" fill="#0a0a0b" stroke="#f5a623" stroke-width="1.6">
+              <animate attributeName="stroke-width" values="1.4;2.2;1.4" dur="2.8s" repeatCount="indefinite"/>
+            </circle>
+            <!-- Inner accent ring -->
+            <circle cx="200" cy="200" r="32" fill="none" stroke="rgba(245,166,35,0.35)" stroke-width="1" stroke-dasharray="2,3"/>
+            <!-- Center label: PM (serif italic, accent) -->
+            <text x="200" y="208" text-anchor="middle" font-family="Instrument Serif, serif" font-size="28" fill="#f5a623" font-style="italic">PM</text>
+          </g>
+
+          <!-- ─── Caption block: explicit agentic AI label ─── -->
+          <!-- Divider line above caption -->
+          <line x1="80" y1="408" x2="320" y2="408" stroke="rgba(245,166,35,0.28)" stroke-width="1"/>
+          <!-- Small pip in center of divider -->
+          <circle cx="200" cy="408" r="2.5" fill="#f5a623"/>
+
+          <!-- Primary caption: AGENTIC AI ORCHESTRATION -->
+          <text x="200" y="429" text-anchor="middle"
+                font-family="JetBrains Mono, monospace" font-size="11"
+                fill="#f5a623" letter-spacing="0.18em" font-weight="600">AGENTIC AI ORCHESTRATION</text>
+
+          <!-- Secondary caption: explanatory line -->
+          <text x="200" y="448" text-anchor="middle"
+                font-family="Inter, sans-serif" font-size="11"
+                fill="#a1a1aa" font-style="italic">PM directing multi-agent product teams</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- ─────────── STATS ─────────── -->
+<section class="stats" style="padding: 50px 0;">
+  <div class="container">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-label">PM Experience</div>
+        <div class="stat-value">15+<span class="unit">years · fintech · healthtech · B2B SaaS</span></div>
+      </div>
+      <div>
+        <div class="stat-label">Portfolio Led</div>
+        <div class="stat-value">$25M+<span class="unit">Director · 6-PM team</span></div>
+      </div>
+      <div>
+        <div class="stat-label">ARR Owned</div>
+        <div class="stat-value">$10M<span class="unit">RCM &amp; payments · $2M from AI</span></div>
+      </div>
+      <div>
+        <div class="stat-label">Payments Volume</div>
+        <div class="stat-value">$3B+<span class="unit">SaaS-embedded scale</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FLAGSHIP BUILDS ─────────── -->
+<section id="flagship">
+  <div class="container">
+    <div class="section-tag">Flagship Agentic AI Builds</div>
+    <h2 class="section-title">Agentic AI, <em>up close.</em></h2>
+    <p class="section-sub">Each agentic system solves a non-trivial coordination problem — multi-agent orchestration, adversarial reasoning, cross-source signal fusion, human-in-the-loop gating, persistent memory loops. Built solo. Production-deployed. Each a complete proof point.</p>
+
+    <div class="featured-grid">
+
+      <!-- CONDUCTOR (FLAGSHIP) -->
+      <div class="featured-card flagship reveal">
+        <div class="card-tile">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Linear ticket spawning agent workers gated by evals">
+            <text x="20" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" letter-spacing="0.12em">SYMPHONY PATTERN · LINEAR AS CONTROL PLANE</text>
+            <circle cx="580" cy="14" r="3" fill="#4ade80">
+              <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Linear ticket -->
+            <rect x="190" y="32" width="220" height="38" rx="5" fill="#16161a" stroke="#26262d"/>
+            <rect x="196" y="38" width="3" height="26" fill="#f5a623"/>
+            <text x="208" y="49" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#6b6b75">CON-1247 · MEDIUM</text>
+            <text x="208" y="62" font-family="Inter, sans-serif" font-size="10.5" fill="#ededee" font-weight="500">Refresh Q3 lifecycle email series</text>
+
+            <!-- Branches to workers -->
+            <g stroke="rgba(245,166,35,0.32)" stroke-width="1" fill="none" stroke-dasharray="3,4">
+              <path d="M 300 70 Q 300 86 130 108">
+                <animate attributeName="stroke-dashoffset" from="14" to="0" dur="1.8s" repeatCount="indefinite"/>
+              </path>
+              <path d="M 300 70 L 300 108">
+                <animate attributeName="stroke-dashoffset" from="14" to="0" dur="1.5s" repeatCount="indefinite"/>
+              </path>
+              <path d="M 300 70 Q 300 86 470 108">
+                <animate attributeName="stroke-dashoffset" from="14" to="0" dur="1.7s" repeatCount="indefinite"/>
+              </path>
+            </g>
+
+            <!-- Three workers -->
+            <g font-family="JetBrains Mono, monospace" font-size="8">
+              <rect x="60" y="108" width="140" height="34" rx="4" fill="#16161a" stroke="rgba(96,165,250,0.4)"/>
+              <text x="70" y="121" fill="#60a5fa" font-weight="600">RESEARCH</text>
+              <text x="70" y="134" fill="#6b6b75" font-size="7.5">haiku · audit existing</text>
+
+              <rect x="230" y="108" width="140" height="34" rx="4" fill="#16161a" stroke="rgba(96,165,250,0.4)"/>
+              <text x="240" y="121" fill="#60a5fa" font-weight="600">DRAFT</text>
+              <text x="240" y="134" fill="#6b6b75" font-size="7.5">opus · write 4 emails</text>
+
+              <rect x="400" y="108" width="140" height="34" rx="4" fill="#16161a" stroke="rgba(96,165,250,0.4)"/>
+              <text x="410" y="121" fill="#60a5fa" font-weight="600">QA</text>
+              <text x="410" y="134" fill="#6b6b75" font-size="7.5">haiku · brand + eval</text>
+            </g>
+
+            <!-- Converge to outcome -->
+            <g stroke="rgba(74,222,128,0.35)" stroke-width="1" fill="none">
+              <path d="M 130 142 Q 130 158 240 162"/>
+              <path d="M 300 142 L 300 162"/>
+              <path d="M 470 142 Q 470 158 360 162"/>
+            </g>
+
+            <!-- Outcome bar -->
+            <rect x="180" y="156" width="240" height="18" rx="3" fill="rgba(74,222,128,0.08)" stroke="rgba(74,222,128,0.45)"/>
+            <text x="300" y="168.5" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#4ade80" font-weight="600" letter-spacing="0.06em">✓ EVAL PASSED · TICKET CLOSED</text>
+          </svg>
+        </div>
+        <div class="card-header">
+          <div class="card-id">// 01 — current build</div>
+          <div class="card-status flagship">★ Flagship · In flight</div>
+        </div>
+        <h2 class="card-title">Conductor</h2>
+        <p class="card-tagline">
+          Linear as a control plane for non-coding AI agents. Takes OpenAI's Symphony pattern out of engineering and into the work nobody automates well yet — marketing ops, RevOps, SEO, lifecycle, customer experience.
+        </p>
+        <p class="card-desc">
+          When OpenAI open-sourced Symphony, the headline was a <strong>500% landed-PR uplift</strong>. The real story was that an issue tracker is the cleanest control plane an autonomous agent has ever had. Conductor extends that pattern into non-coding workflows using the <strong>Anthropic Advisor architecture</strong> — Claude Opus 4.7 reasoning + Haiku 4.5 executors — running on Claude Managed Agents' outcomes-graded multiagent infrastructure with webhooks. 14-day build. Open-source, eval-gated, model-agnostic.
+        </p>
+        <div class="card-meta">
+          <div class="meta-label">Stack</div>
+          <div class="meta-value">Claude Opus 4.7 · Haiku 4.5 · Managed Agents · Linear API · Vercel · Braintrust</div>
+          <div class="meta-label">Pattern</div>
+          <div class="meta-value">Symphony · Advisor · Outcomes-graded eval gates</div>
+          <div class="meta-label">Differentiation</div>
+          <div class="meta-value">Symphony pattern + Anthropic stack + non-coding ICP — wedge no competitor occupies</div>
+        </div>
+        <div class="stack">
+          <span class="stack-item">TypeScript</span>
+          <span class="stack-item">Next.js</span>
+          <span class="stack-item">Anthropic SDK</span>
+          <span class="stack-item">Managed Agents</span>
+          <span class="stack-item">Linear MCP</span>
+          <span class="stack-item">Braintrust</span>
+          <span class="stack-item">Vercel</span>
+        </div>
+      </div>
+
+      <!-- PRODAGENTCO -->
+      <div class="featured-card reveal">
+        <div class="card-tile">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daily autonomous pipeline with three human-in-the-loop gates">
+            <text x="20" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" letter-spacing="0.12em">06:00 CT · DAILY AUTONOMOUS RUN</text>
+            <circle cx="580" cy="14" r="3" fill="#4ade80">
+              <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Pipeline track -->
+            <line x1="60" y1="100" x2="540" y2="100" stroke="rgba(245,166,35,0.22)" stroke-width="1" stroke-dasharray="3,4"/>
+
+            <!-- Traveling pulse -->
+            <circle r="4" fill="#f5a623" opacity="0.9">
+              <animate attributeName="cx" values="30;570;570" dur="4.5s" repeatCount="indefinite"/>
+              <animate attributeName="cy" values="100;100;100" dur="4.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="4.5s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Stages -->
+            <g font-family="JetBrains Mono, monospace" font-size="8.5" letter-spacing="0.05em" text-anchor="middle">
+              <!-- Discovery -->
+              <rect x="20" y="80" width="76" height="40" rx="4" fill="#16161a" stroke="#26262d"/>
+              <text x="58" y="96" fill="#ededee" font-weight="600">DISCOVER</text>
+              <text x="58" y="110" fill="#6b6b75" font-size="7">market intel</text>
+
+              <!-- Debate -->
+              <rect x="125" y="80" width="76" height="40" rx="4" fill="#16161a" stroke="#26262d"/>
+              <text x="163" y="96" fill="#ededee" font-weight="600">DEBATE</text>
+              <text x="163" y="110" fill="#6b6b75" font-size="7">5 agents</text>
+
+              <!-- Gate 1 -->
+              <line x1="218" y1="70" x2="218" y2="130" stroke="#f5a623" stroke-width="1" stroke-dasharray="2,2"/>
+              <rect x="208" y="58" width="20" height="13" rx="2" fill="#0a0a0b" stroke="#f5a623" stroke-width="0.6"/>
+              <text x="218" y="67" fill="#f5a623" font-size="7" font-weight="600">G1</text>
+
+              <!-- Plan -->
+              <rect x="236" y="80" width="76" height="40" rx="4" fill="#16161a" stroke="#26262d"/>
+              <text x="274" y="96" fill="#ededee" font-weight="600">PLAN</text>
+              <text x="274" y="110" fill="#6b6b75" font-size="7">8 agents</text>
+
+              <!-- Gate 2 -->
+              <line x1="329" y1="70" x2="329" y2="130" stroke="#f5a623" stroke-width="1" stroke-dasharray="2,2"/>
+              <rect x="319" y="58" width="20" height="13" rx="2" fill="#0a0a0b" stroke="#f5a623" stroke-width="0.6"/>
+              <text x="329" y="67" fill="#f5a623" font-size="7" font-weight="600">G2</text>
+
+              <!-- Build -->
+              <rect x="347" y="80" width="76" height="40" rx="4" fill="#16161a" stroke="#26262d"/>
+              <text x="385" y="96" fill="#ededee" font-weight="600">BUILD</text>
+              <text x="385" y="110" fill="#6b6b75" font-size="7">eng · qa · sec</text>
+
+              <!-- Gate 3 -->
+              <line x1="440" y1="70" x2="440" y2="130" stroke="#f5a623" stroke-width="1" stroke-dasharray="2,2"/>
+              <rect x="430" y="58" width="20" height="13" rx="2" fill="#0a0a0b" stroke="#f5a623" stroke-width="0.6"/>
+              <text x="440" y="67" fill="#f5a623" font-size="7" font-weight="600">G3</text>
+
+              <!-- Ship -->
+              <rect x="458" y="80" width="76" height="40" rx="4" fill="#16161a" stroke="rgba(74,222,128,0.5)"/>
+              <text x="496" y="96" fill="#4ade80" font-weight="600">SHIP</text>
+              <text x="496" y="110" fill="#6b6b75" font-size="7">vercel</text>
+            </g>
+
+            <!-- Legend -->
+            <text x="20" y="160" font-family="JetBrains Mono, monospace" font-size="7" fill="#6b6b75" letter-spacing="0.06em">G* = HUMAN-IN-LOOP GATE · TELEGRAM APPROVAL</text>
+          </svg>
+        </div>
+        <div class="card-header">
+          <div class="card-id">// 02</div>
+          <div class="card-status live">Running daily at 6 AM CT</div>
+        </div>
+        <h2 class="card-title">ProdAgentCo</h2>
+        <p class="card-tagline">
+          Autonomous multi-agent product pipeline that ideates, debates, plans, and builds a new product daily — without me.
+        </p>
+        <p class="card-desc">
+          Daily 6 AM autonomous runs via Mac LaunchAgent: <strong>Discovery → CEO Debate → Gate 1 → 7 Planning agents → Gate 2 → Build → Gate 3</strong>. Three HITL approvals through Telegram. CEO Debate Layer surfaces risk through opposed PM/CTO/CFO/Marketing/Legal agents before the synthesizer renders GO / NO-GO / NEEDS_REVIEW. Model routing: Groq + Haiku for workers, Sonnet for reasoning roles — major cost reduction without quality loss.
+        </p>
+        <div class="stack">
+          <span class="stack-item">CrewAI</span>
+          <span class="stack-item">Anthropic API</span>
+          <span class="stack-item">LangSmith</span>
+          <span class="stack-item">Telegram HITL</span>
+          <span class="stack-item">Next.js / Vercel</span>
+          <span class="stack-item">Mac LaunchAgent</span>
+        </div>
+        <div class="card-links">
+          <a href="https://github.com/Vikings1234/prodagentco" target="_blank" rel="noopener" class="card-link">GitHub <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- TRIBUNAL -->
+      <div class="featured-card reveal">
+        <div class="card-tile">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bull Bear and Contrarian agents debating with reconciler verdict">
+            <text x="20" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" letter-spacing="0.12em">$NVDA · DEBATE 2026-05-12</text>
+            <text x="580" y="18" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#6b6b75">ROUND 3 OF 3</text>
+
+            <!-- Three agent cards -->
+            <g font-family="JetBrains Mono, monospace" font-size="8.5">
+
+              <!-- BULL -->
+              <rect x="20" y="30" width="180" height="78" rx="6" fill="#16161a" stroke="rgba(74,222,128,0.4)"/>
+              <circle cx="40" cy="50" r="9" fill="rgba(74,222,128,0.15)" stroke="#4ade80"/>
+              <text x="40" y="53.5" text-anchor="middle" fill="#4ade80" font-size="10" font-weight="700">▲</text>
+              <text x="58" y="49" fill="#4ade80" font-weight="600">BULL</text>
+              <text x="58" y="61" fill="#6b6b75" font-size="7.5">long · sonnet</text>
+              <line x1="30" y1="76" x2="190" y2="76" stroke="#26262d" stroke-width="0.5"/>
+              <text x="30" y="90" fill="#a1a1aa" font-size="8.5">$220 PT · +18% upside</text>
+              <text x="30" y="102" fill="#6b6b75" font-size="7.5">data-center beat sustains</text>
+
+              <!-- BEAR -->
+              <rect x="210" y="30" width="180" height="78" rx="6" fill="#16161a" stroke="rgba(239,68,68,0.4)"/>
+              <circle cx="230" cy="50" r="9" fill="rgba(239,68,68,0.15)" stroke="#ef4444"/>
+              <text x="230" y="53.5" text-anchor="middle" fill="#ef4444" font-size="10" font-weight="700">▼</text>
+              <text x="248" y="49" fill="#ef4444" font-weight="600">BEAR</text>
+              <text x="248" y="61" fill="#6b6b75" font-size="7.5">short · sonnet</text>
+              <line x1="220" y1="76" x2="380" y2="76" stroke="#26262d" stroke-width="0.5"/>
+              <text x="220" y="90" fill="#a1a1aa" font-size="8.5">base-rate err caught</text>
+              <text x="220" y="102" fill="#6b6b75" font-size="7.5">prior P(beat) ≠ 78%</text>
+
+              <!-- CONTRARIAN -->
+              <rect x="400" y="30" width="180" height="78" rx="6" fill="#16161a" stroke="rgba(192,132,252,0.4)"/>
+              <circle cx="420" cy="50" r="9" fill="rgba(192,132,252,0.15)" stroke="#c084fc"/>
+              <text x="420" y="53.5" text-anchor="middle" fill="#c084fc" font-size="11" font-weight="700">≠</text>
+              <text x="438" y="49" fill="#c084fc" font-weight="600">CONTRARIAN</text>
+              <text x="438" y="61" fill="#6b6b75" font-size="7.5">neutral · sonnet</text>
+              <line x1="410" y1="76" x2="570" y2="76" stroke="#26262d" stroke-width="0.5"/>
+              <text x="410" y="90" fill="#a1a1aa" font-size="8.5">both miss vol regime</text>
+              <text x="410" y="102" fill="#6b6b75" font-size="7.5">IV expansion not priced</text>
+            </g>
+
+            <!-- Convergence lines -->
+            <g stroke="rgba(245,166,35,0.32)" stroke-width="1" fill="none">
+              <path d="M 110 112 Q 110 132 220 140"/>
+              <path d="M 300 112 L 300 140"/>
+              <path d="M 490 112 Q 490 132 380 140"/>
+            </g>
+
+            <!-- Verdict -->
+            <rect x="200" y="135" width="200" height="34" rx="6" fill="rgba(245,166,35,0.08)" stroke="#f5a623"/>
+            <text x="300" y="150" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" font-weight="600" letter-spacing="0.08em">RECONCILER → HOLD</text>
+            <text x="300" y="162" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#a1a1aa">low conviction · 232/232 tests</text>
+          </svg>
+        </div>
+        <div class="card-header">
+          <div class="card-id">// 03</div>
+          <div class="card-status building">Session 5 · 232/232 tests passing</div>
+        </div>
+        <h2 class="card-title">Tribunal</h2>
+        <p class="card-tagline">
+          Agentic stock-debate orchestrator. Bull / Bear / Contrarian agents reason adversarially over structured evidence bundles, daily.
+        </p>
+        <p class="card-desc">
+          Three Sonnet agents on <strong>Claude Code Agent Teams</strong>, restricted to messaging primitives — no tools, no web — debating over a SignalBundle assembled from Databento market state, SEC EDGAR filings, Alpha Vantage news, and Finnhub catalysts. <strong>Completeness gate</strong>: bundles below 90% don't go to debate. First live run validated the architecture — Bear caught Bull on incorrect base-rate arithmetic; Bull conceded. The disagreement is the product.
+        </p>
+        <div class="stack">
+          <span class="stack-item">Python 3.11</span>
+          <span class="stack-item">Pydantic v2</span>
+          <span class="stack-item">FastAPI</span>
+          <span class="stack-item">Claude Agent Teams</span>
+          <span class="stack-item">Supabase</span>
+          <span class="stack-item">Next.js 14</span>
+          <span class="stack-item">Tailwind</span>
+        </div>
+      </div>
+
+      <!-- CONVERGENCE SCANNER -->
+      <div class="featured-card reveal">
+        <div class="card-tile">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three signal traces converging with alert fire">
+            <text x="20" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" letter-spacing="0.12em">CONVERGENCE DETECTED · T-0:42</text>
+            <text x="580" y="18" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#6b6b75">$ETR · 09:00 ET</text>
+
+            <!-- Vertical convergence line -->
+            <line x1="395" y1="32" x2="395" y2="148" stroke="#f5a623" stroke-width="1" stroke-dasharray="3,3" opacity="0.6"/>
+            <circle cx="395" cy="32" r="3.5" fill="#f5a623">
+              <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="395" cy="32" r="3.5" fill="none" stroke="#f5a623">
+              <animate attributeName="r" values="3.5;14;14" dur="1.8s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.8;0;0" dur="1.8s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Signal 1: Options Flow (spike) -->
+            <text x="20" y="48" font-family="JetBrains Mono, monospace" font-size="8" fill="#a1a1aa" letter-spacing="0.04em">OPTIONS FLOW</text>
+            <text x="20" y="58" font-family="JetBrains Mono, monospace" font-size="7" fill="#6b6b75">5σ anomaly</text>
+            <line x1="140" y1="60" x2="580" y2="60" stroke="#26262d" stroke-width="0.5" stroke-dasharray="1,3"/>
+            <path d="M 140 60 L 290 60 L 305 60 L 320 60 L 340 60 L 360 60 L 380 60 L 390 60 L 395 34 L 400 60 L 420 60 L 580 60"
+                  fill="none" stroke="#4ade80" stroke-width="1.4"/>
+
+            <!-- Signal 2: Polymarket odds (step shift) -->
+            <text x="20" y="92" font-family="JetBrains Mono, monospace" font-size="8" fill="#a1a1aa" letter-spacing="0.04em">POLYMARKET</text>
+            <text x="20" y="102" font-family="JetBrains Mono, monospace" font-size="7" fill="#6b6b75">23 → 71%</text>
+            <line x1="140" y1="103" x2="580" y2="103" stroke="#26262d" stroke-width="0.5" stroke-dasharray="1,3"/>
+            <path d="M 140 103 L 395 103 L 395 82 L 580 82"
+                  fill="none" stroke="#60a5fa" stroke-width="1.4"/>
+
+            <!-- Signal 3: News Wire (silence) -->
+            <text x="20" y="134" font-family="JetBrains Mono, monospace" font-size="8" fill="#a1a1aa" letter-spacing="0.04em">NEWS WIRE</text>
+            <text x="20" y="144" font-family="JetBrains Mono, monospace" font-size="7" fill="#6b6b75">silent · α-gap</text>
+            <line x1="140" y1="138" x2="580" y2="138" stroke="#6b6b75" stroke-width="1.3" stroke-dasharray="4,4"/>
+
+            <!-- Bottom alert bar -->
+            <rect x="20" y="155" width="560" height="18" rx="3" fill="rgba(245,166,35,0.08)" stroke="rgba(245,166,35,0.45)"/>
+            <text x="30" y="167.5" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#f5a623" letter-spacing="0.04em">⚡ TELEGRAM ALERT · 3 SIGNALS ALIGNED · CLAUDE HYPOTHESIS GENERATED</text>
+          </svg>
+        </div>
+        <div class="card-header">
+          <div class="card-id">// 04</div>
+          <div class="card-status building">Round 6 · 14 tests green · 5 ADRs</div>
+        </div>
+        <h2 class="card-title">Convergence Scanner</h2>
+        <p class="card-tagline">
+          Three-signal convergence detector — fuses derivatives flow, Polymarket odds, and news-silence windows to surface pre-announcement signals.
+        </p>
+        <p class="card-desc">
+          Bloomberg fuses this for $24K/year. Nothing under $5K does. Convergence Scanner watches for <strong>anomalous order flow in a macro-sensitive instrument</strong>, a <strong>concurrent Polymarket odds shift on a related event</strong>, and <strong>silence on the news wire</strong> — and fires a Telegram alert with a Claude-generated hypothesis when all three align. Not a front-running tool; a tailing tool on public order flow you can see.
+        </p>
+        <div class="stack">
+          <span class="stack-item">Python / CrewAI</span>
+          <span class="stack-item">Claude Sonnet + Haiku</span>
+          <span class="stack-item">Databento</span>
+          <span class="stack-item">Polymarket CLOB</span>
+          <span class="stack-item">Supabase</span>
+          <span class="stack-item">Telegram HITL</span>
+        </div>
+      </div>
+
+      <!-- JOB SEARCH AGENT V2 -->
+      <div class="featured-card reveal">
+        <div class="card-header">
+          <div class="card-id">// 05</div>
+          <div class="card-status live">Live · v2-session8</div>
+        </div>
+        <h2 class="card-title">Job Search Agent <em>v2</em></h2>
+        <p class="card-tagline">
+          Full materials pipeline on top of Claude Managed Agents — and the same system I use to land the interviews this portfolio supports.
+        </p>
+        <p class="card-desc">
+          V1 used a Managed Agent to search jobs (slow, fragile, 9 production bugs). V2 collapses that layer to SerpAPI + Haiku scoring (5–8 sec end to end) and reserves Managed Agents for what actually needs reasoning — a <strong>5-tab materials pipeline</strong>: Resume Tailor, LinkedIn Outreach, Cover Letter, Company Intel (live web search), Interview Prep. A Grader agent writes to Turso memory; future runs read those signals back into prompts. Adaptive without overcorrection.
+        </p>
+        <div class="stack">
+          <span class="stack-item">Next.js 16</span>
+          <span class="stack-item">TypeScript</span>
+          <span class="stack-item">Managed Agents</span>
+          <span class="stack-item">SerpAPI</span>
+          <span class="stack-item">Turso</span>
+          <span class="stack-item">shadcn/ui</span>
+          <span class="stack-item">Vercel</span>
+        </div>
+        <div class="card-links">
+          <a href="https://job-search-agent-gold.vercel.app" target="_blank" rel="noopener" class="card-link">Live demo <span class="arrow">→</span></a>
+          <a href="https://github.com/Vikings1234/job-search-agent" target="_blank" rel="noopener" class="card-link">GitHub <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- AP2 AGENT WALLET -->
+      <div class="featured-card reveal">
+        <div class="card-tile">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AP2 mandate chain with cryptographically linked blocks">
+            <text x="20" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" letter-spacing="0.12em">AP2 MANDATE CHAIN · COORDINATED COMMERCE</text>
+
+            <!-- Block 1: Intent -->
+            <rect x="30" y="42" width="135" height="80" rx="6" fill="#16161a" stroke="#26262d"/>
+            <text x="97.5" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#6b6b75" letter-spacing="0.1em">BLOCK 01</text>
+            <text x="97.5" y="78" text-anchor="middle" font-family="Instrument Serif, serif" font-size="18" font-style="italic" fill="#ededee">Intent</text>
+            <text x="97.5" y="93" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a1a1aa">Palm Springs · $700</text>
+            <line x1="45" y1="102" x2="150" y2="102" stroke="#26262d" stroke-width="0.5"/>
+            <text x="97.5" y="115" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#6b6b75">sig: 0xa3f2…b91c</text>
+
+            <!-- Hash link 1 -->
+            <line x1="165" y1="82" x2="220" y2="82" stroke="#f5a623" stroke-width="1.5"/>
+            <text x="192.5" y="74" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#f5a623">SHA256</text>
+            <circle cx="192.5" cy="82" r="5" fill="#0a0a0b" stroke="#f5a623" stroke-width="1.2"/>
+            <circle cx="192.5" cy="82" r="1.5" fill="#f5a623"/>
+
+            <!-- Block 2: Cart -->
+            <rect x="220" y="42" width="135" height="80" rx="6" fill="#16161a" stroke="#f5a623"/>
+            <text x="287.5" y="60" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#f5a623" letter-spacing="0.1em">BLOCK 02</text>
+            <text x="287.5" y="78" text-anchor="middle" font-family="Instrument Serif, serif" font-size="18" font-style="italic" fill="#ededee">Cart</text>
+            <text x="287.5" y="93" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#a1a1aa">Flight + Hotel · $680</text>
+            <line x1="235" y1="102" x2="340" y2="102" stroke="#26262d" stroke-width="0.5"/>
+            <text x="287.5" y="115" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#4ade80">user signed ✓</text>
+
+            <!-- Branching hash links -->
+            <path d="M 355 82 Q 380 82 405 56" stroke="#f5a623" stroke-width="1.5" fill="none"/>
+            <path d="M 355 82 Q 380 82 405 108" stroke="#f5a623" stroke-width="1.5" fill="none"/>
+            <circle cx="380" cy="82" r="5" fill="#0a0a0b" stroke="#f5a623" stroke-width="1.2"/>
+            <circle cx="380" cy="82" r="1.5" fill="#f5a623"/>
+
+            <!-- Receipt 1: Flight -->
+            <rect x="410" y="38" width="170" height="42" rx="6" fill="#16161a" stroke="rgba(74,222,128,0.45)"/>
+            <text x="495" y="53" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#4ade80" letter-spacing="0.1em">RECEIPT · FLIGHT</text>
+            <text x="495" y="67" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ededee" font-weight="500">United LAX → PSP</text>
+            <text x="495" y="77" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#6b6b75">$310 · UA1247</text>
+
+            <!-- Receipt 2: Hotel -->
+            <rect x="410" y="86" width="170" height="42" rx="6" fill="#16161a" stroke="rgba(74,222,128,0.45)"/>
+            <text x="495" y="101" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#4ade80" letter-spacing="0.1em">RECEIPT · HOTEL</text>
+            <text x="495" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#ededee" font-weight="500">Marriott · 2 nights</text>
+            <text x="495" y="125" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="6.5" fill="#6b6b75">$370 · coord_ID</text>
+
+            <!-- Footer note -->
+            <text x="300" y="153" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#6b6b75" letter-spacing="0.06em">ATOMIC EXECUTION · COORDINATED_BOOKING_ID LINKS BOTH RECEIPTS</text>
+            <text x="300" y="168" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#6b6b75" letter-spacing="0.04em">gemini pro prime · 3x flash sub-agents · sqlite atomicity</text>
+          </svg>
+        </div>
+        <div class="card-header">
+          <div class="card-id">// 06</div>
+          <div class="card-status building">Working prototype</div>
+        </div>
+        <h2 class="card-title">Autonomous Agent Wallet <em>— AP2</em></h2>
+        <p class="card-tagline">
+          Working prototype of Google's Agent Payments Protocol — a coordinated multi-agent commerce flow with the full mandate chain end to end.
+        </p>
+        <p class="card-desc">
+          User intent ($700, Palm Springs, first weekend of November) → prime agent negotiates simultaneously with airline + hotel sub-agents → <strong>dual cryptographically-linked Cart Mandates</strong> execute in one atomic transaction → flight + hotel receipts written together or rolled back together. A 4-agent topology (Gemini Pro prime + three Flash sub-agents) at <strong>64% cost reduction</strong> vs all-Pro without quality loss. The <code>coordinated_booking_id</code> is the proof both receipts came from one Cart Mandate.
+        </p>
+        <div class="stack">
+          <span class="stack-item">Python</span>
+          <span class="stack-item">Gemini Pro &amp; Flash</span>
+          <span class="stack-item">AP2 Protocol</span>
+          <span class="stack-item">FastAPI</span>
+          <span class="stack-item">SQLite</span>
+          <span class="stack-item">Hash chain</span>
+        </div>
+      </div>
+
+      <!-- EDGAR 8-K SCANNER -->
+      <div class="featured-card reveal">
+        <div class="card-tile">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Telegram alert from EDGAR 8-K scanner with scored catalyst">
+            <text x="20" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" letter-spacing="0.12em">07:00 ET · EDGAR 8-K SCANNER · TELEGRAM ALERT</text>
+            <circle cx="580" cy="14" r="3" fill="#4ade80">
+              <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Bot avatar -->
+            <circle cx="40" cy="50" r="15" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.2"/>
+            <text x="40" y="54" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#60a5fa" font-weight="700">8K</text>
+
+            <!-- Bot handle + time -->
+            <text x="62" y="46" font-family="Inter, sans-serif" font-size="11" fill="#ededee" font-weight="600">@edgar_scanner_bot</text>
+            <text x="62" y="58" font-family="JetBrains Mono, monospace" font-size="8" fill="#6b6b75">today · 07:02 ET</text>
+
+            <!-- Message bubble -->
+            <rect x="62" y="68" width="518" height="100" rx="8" fill="#16161a" stroke="#26262d"/>
+
+            <!-- Ticker + filing -->
+            <text x="78" y="88" font-family="JetBrains Mono, monospace" font-size="13" fill="#f5a623" font-weight="700">$ETR</text>
+            <text x="120" y="88" font-family="Inter, sans-serif" font-size="10" fill="#ededee">·  Item 1.01 — Material Definitive Agreement</text>
+
+            <!-- Excerpt -->
+            <text x="78" y="106" font-family="Inter, sans-serif" font-size="9.5" fill="#a1a1aa" font-style="italic">"…7 new gas plants powering Meta's expanding</text>
+            <text x="78" y="119" font-family="Inter, sans-serif" font-size="9.5" fill="#a1a1aa" font-style="italic">data-center capacity through 2030, an incremental</text>
+            <text x="78" y="132" font-family="Inter, sans-serif" font-size="9.5" fill="#a1a1aa" font-style="italic">$2B commitment over prior agreements…"</text>
+
+            <!-- Score row -->
+            <line x1="78" y1="142" x2="564" y2="142" stroke="#26262d" stroke-width="0.5"/>
+
+            <text x="78" y="158" font-family="JetBrains Mono, monospace" font-size="8" fill="#6b6b75" letter-spacing="0.06em">SCORE</text>
+            <text x="118" y="158" font-family="JetBrains Mono, monospace" font-size="9" fill="#4ade80" font-weight="700">9.2/10</text>
+
+            <text x="180" y="158" font-family="JetBrains Mono, monospace" font-size="8" fill="#6b6b75" letter-spacing="0.06em">DIRECTION</text>
+            <text x="238" y="158" font-family="JetBrains Mono, monospace" font-size="9" fill="#4ade80" font-weight="700">▲ BULLISH</text>
+
+            <text x="320" y="158" font-family="JetBrains Mono, monospace" font-size="8" fill="#6b6b75" letter-spacing="0.06em">CATALYST</text>
+            <text x="377" y="158" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" font-weight="600">hyperscaler contract · $2B</text>
+          </svg>
+        </div>
+        <div class="card-header">
+          <div class="card-id">// 07</div>
+          <div class="card-status live">Running daily at 7 AM ET</div>
+        </div>
+        <h2 class="card-title">EDGAR 8-K Scanner</h2>
+        <p class="card-tagline">
+          7 AM ET pre-market scanner that turns the SEC EDGAR firehose into a ranked, Claude-scored Telegram alert before the open.
+        </p>
+        <p class="card-desc">
+          Pulls the prior <strong>~18 hours of 8-K filings</strong>, scores them by Item type (1.01 Material Agreement, 2.01 Acquisition, 2.02 Earnings, 5.02 Officer changes) and catalyst keyword overlap (FDA, DOD, hyperscaler counterparties, rare earths, design wins, scale terms like "billion"), then posts a ranked alert via Telegram with the ticker, the excerpt, and a <strong>directional bullish/bearish call</strong>. Runs as a Mac LaunchAgent alongside ProdAgentCo — same operational pattern, different signal.
+        </p>
+        <div class="stack">
+          <span class="stack-item">Python</span>
+          <span class="stack-item">SEC EDGAR Atom</span>
+          <span class="stack-item">Claude Haiku</span>
+          <span class="stack-item">Telegram Bot API</span>
+          <span class="stack-item">Mac LaunchAgent</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── ALL PROJECTS ─────────── -->
+<section id="projects" style="background: var(--bg-2); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft);">
+  <div class="container">
+    <div class="section-tag">The Full Portfolio</div>
+    <h2 class="section-title">Everything <em>else I've shipped.</em></h2>
+    <p class="section-sub">Every project here is deployed, tested, and reachable. Each one started as a question — "could a PM build this in a weekend?" — and ended with a live URL.</p>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All builds</button>
+      <button class="filter-btn" data-filter="agentic">Agentic AI</button>
+      <button class="filter-btn" data-filter="fintech">Fintech / Markets</button>
+      <button class="filter-btn" data-filter="health">Healthtech</button>
+      <button class="filter-btn" data-filter="consumer">Consumer</button>
+      <button class="filter-btn" data-filter="consulting">Consulting Tools</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+
+      <div class="project-card reveal" data-cat="agentic consulting">
+        <div class="card-id">// 08</div>
+        <div class="pcat">Consulting Diagnostic</div>
+        <h3>AI Readiness Scorecard</h3>
+        <p class="pdesc">Vertical-branched 7-dimension assessment for executive prospects. Generates personalized readiness reports with engagement tier recommendation, preliminary agent strategy, and phased project roadmap. Doubles as ProdAgentCo's proposal-generator.</p>
+        <p class="pstack">Next.js · Supabase · Claude API · Tailwind · Vercel</p>
+      </div>
+
+      <div class="project-card reveal" data-cat="consumer">
+        <div class="card-id">// 09</div>
+        <div class="pcat">Consumer · Personal</div>
+        <h3>The Morning Brief</h3>
+        <p class="pdesc">Daily AI news dashboard built primarily for my 81-year-old father. RSS-fed for cost, Claude Haiku for synthesis, on-demand loading. Includes a dedicated Stillwater Ponies high-school sports tab as the highest-priority feed. Runs at ~$2/month.</p>
+        <p class="pstack">React TS · Express · Haiku 4.5 · RSS · Vercel</p>
+      </div>
+
+      <div class="project-card reveal" data-cat="health">
+        <div class="card-id">// 10</div>
+        <div class="pcat">Healthtech</div>
+        <h3>Clinical Notes Generator</h3>
+        <p class="pdesc">Ambient clinical documentation app. Browser MediaRecorder streams to Deepgram nova-2-medical for real-time transcription; Claude generates structured SOAP notes from the transcript. First production AI build — and a clear domain-to-AI bridge for healthtech roles.</p>
+        <p class="pstack">Next.js · Deepgram · Claude API · Vercel</p>
+      </div>
+
+      <div class="project-card reveal" data-cat="fintech agentic">
+        <div class="card-id">// 11</div>
+        <div class="pcat">Markets · Agentic</div>
+        <h3>Whale Scanner</h3>
+        <p class="pdesc">Real-time Polymarket whale-activity dashboard. WebSocket connection to the CLOB with 30-sec REST gap-filler, 3-layer dedup, NegRisk detection, and a 4-panel UI (live feed · top markets · volume spikes · whale wallets). Built and deployed in a single session.</p>
+        <p class="pstack">Python FastAPI · Next.js 14 · SQLite · Telegram · Railway</p>
+      </div>
+
+      <div class="project-card reveal" data-cat="fintech">
+        <div class="card-id">// 12</div>
+        <div class="pcat">Markets · Sports Analytics</div>
+        <h3>Edge Scanner</h3>
+        <p class="pdesc">3-agent prediction chain for NBA, NHL, and NCAAM — model probability, edge gates, fractional Kelly sizing, Brier-score grading. v3.0 caught a 5-play NHL slate with +10.2% top edge. Originally a Replit build; later wired into a MiroFish multi-agent simulation seed pipeline.</p>
+        <p class="pstack">Flask · Claude · SQLite · Replit</p>
+      </div>
+
+      <div class="project-card reveal" data-cat="consumer">
+        <div class="card-id">// 13</div>
+        <div class="pcat">Consumer · Direct Bookings</div>
+        <h3>Johnson Lake House</h3>
+        <p class="pdesc">A book-direct vacation rental site at johnsonlake-home.com — full SEO meta stack, Open Graph cards, tabbed gallery with lightbox, embedded map, staging branch workflow on Vercel. Optimized to win hyper-local searches the big OTAs don't bother indexing for.</p>
+        <p class="pstack">HTML · CSS · Vanilla JS · Vercel</p>
+      </div>
+
+      <div class="project-card reveal" data-cat="fintech">
+        <div class="card-id">// 14</div>
+        <div class="pcat">Markets · Modeling</div>
+        <h3>MLB Signal Engine</h3>
+        <p class="pdesc">PRD v1.2 baseball picks model — MLB Stats API, pybaseball, The Odds API, and Open-Meteo for weather signals. Adaptive feedback loop logs outcomes and adjusts signal weights, with locked-signal rules to prevent overcorrection on noise.</p>
+        <p class="pstack">Python · MLB Stats API · pybaseball · Open-Meteo · Claude</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── ABOUT ─────────── -->
+<section id="about">
+  <div class="container">
+    <div class="section-tag">About</div>
+    <h2 class="section-title">PM-as-Builder <em>is the wedge.</em></h2>
+
+    <div class="about-wrap">
+      <div class="about-text">
+        <p>
+          For 15 years I've led product teams in <strong>fintech, healthtech, and dental practice management</strong> — including $25M+ digital-lending portfolios at Equifax, all RCM product at Planet DDS ($10M ARR with $2M new ARR from AI insurance verification), and embedded payments operating at $3B+ in annual volume. Before that, two US patents from Canon R&amp;D in NLP and augmented reality.
+        </p>
+        <p>
+          What changed in the past year is the floor. <strong>The build barrier has collapsed.</strong> With Claude Code, Vercel, and a coherent architecture, a senior PM can ship a multi-agent system in days that would have required a team a quarter ago. The bottleneck moved — from "can you build it" to "did you design the right thing."
+        </p>
+        <p>
+          That's the wedge I'm building into. <strong>Domain expertise as the defensible moat, the build itself as the proof.</strong> Every project in this portfolio shipped because I designed the architecture, wrote the spec, made the model and protocol choices, and ran the integration loop end-to-end. Not vibe-coded. Designed.
+        </p>
+        <p>
+          I'm currently in conversations for <strong>Principal / Director AI Product roles</strong>. If you're building agentic systems that need a PM who can hold the technical depth and the customer truth in the same head — let's talk.
+        </p>
+      </div>
+
+      <div>
+        <div class="about-quote">
+          "Stateless agents are <span>demos</span>. Stateful agents are <span>products</span>. The gap between 'it works' and 'it's useful' is almost entirely state management and error handling."
+        </div>
+
+        <div class="credentials">
+          <div class="cred-item">
+            <div class="cred-label">Most recent</div>
+            <div class="cred-value">Sr. PM, Planet DDS</div>
+            <div class="cred-detail">All RCM product · $10M ARR · $2M new ARR from AI insurance verification · $3B+ payments volume</div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-label">Prior</div>
+            <div class="cred-value">Director PM, Equifax</div>
+            <div class="cred-detail">6-person PM team · $25M+ portfolio in digital lending · fintech infrastructure</div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-label">Inventor</div>
+            <div class="cred-value">2 US Patents</div>
+            <div class="cred-detail">NLP &amp; Augmented Reality at Canon R&amp;D</div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-label">Education</div>
+            <div class="cred-value">BS Finance</div>
+            <div class="cred-detail">Carlson School of Management, University of Minnesota</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── PHILOSOPHY / LESSONS ─────────── -->
+<section id="philosophy" class="philosophy">
+  <div class="container">
+    <div class="section-tag">Builder's Notes</div>
+    <h2 class="section-title">What 90 days of building <em>actually taught me.</em></h2>
+    <p class="section-sub">Six lessons compounded across ProdAgentCo, Tribunal, Convergence Scanner, Edge Scanner, and the materials pipeline. These show up in interviews more than the resume bullets do.</p>
+
+    <div class="lessons-grid">
+      <div class="lesson reveal">
+        <div class="lesson-num">// 01</div>
+        <h4>Structured disagreement beats single-agent reasoning</h4>
+        <p>Bull/Bear/Risk in Tribunal and the CEO Debate Layer in ProdAgentCo both proved it. It's not about <em>more</em> agents — it's about <em>opposed</em> agents. Forced rebuttals surface what a single agent rationalizes away.</p>
+      </div>
+      <div class="lesson reveal">
+        <div class="lesson-num">// 02</div>
+        <h4>Model routing is a cost-architecture decision</h4>
+        <p>Haiku for fetch / structure / filter. Sonnet (or Opus) for genuine reasoning and synthesis. The Advisor pattern delivers major cost reduction without touching output quality — once the workload is understood.</p>
+      </div>
+      <div class="lesson reveal">
+        <div class="lesson-num">// 03</div>
+        <h4>HITL gates need a risk framework, not vibes</h4>
+        <p>A 4-dimension matrix — irreversibility, blast radius, compliance exposure, confidence — gives a defensible answer to "should the agent act autonomously here?" Approve / edit / reject beats binary go/no-go.</p>
+      </div>
+      <div class="lesson reveal">
+        <div class="lesson-num">// 04</div>
+        <h4>Context handoff is where multi-agent chains break</h4>
+        <p>Each agent owns one clearly defined responsibility. Overlap creates ambiguity that cascades through the entire pipeline. Define what each agent <em>owns</em> before writing a single prompt.</p>
+      </div>
+      <div class="lesson reveal">
+        <div class="lesson-num">// 05</div>
+        <h4>Adaptive feedback loops are the real unlock</h4>
+        <p>Agents that log outcomes and adjust signal weights are categorically different from static ones. But: explicit rules for how many outcomes trigger adjustment, and which signals are locked — or you overcorrect on noise.</p>
+      </div>
+      <div class="lesson reveal">
+        <div class="lesson-num">// 06</div>
+        <h4>Framework choice has a half-life</h4>
+        <p>CrewAI was the right starting point. LangGraph's <code>interrupt()</code> + checkpointing is becoming the production HITL standard. Build to migrate, not to last forever. The protocol layer is where the real durability lives — MCP, AP2, A2A.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── CONTACT ─────────── -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Let's <em>talk shop.</em></h2>
+    <p>If you're hiring a Principal / Director PM for agentic AI, building something interesting at the protocol layer, or just want to compare notes on Symphony patterns — reach out.</p>
+    <div class="contact-actions">
+      <a href="mailto:jeremyserfling@gmail.com" class="btn btn-primary">jeremyserfling@gmail.com <span class="arrow">→</span></a>
+      <a href="https://www.linkedin.com/in/jeremyserfling" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+      <a href="https://github.com/Vikings1234" target="_blank" rel="noopener" class="btn">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────── FOOTER ─────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-text">© 2026 Jeremy Serfling · Built solo with Claude Code · Deployed on Vercel</div>
+      <div class="footer-links">
+        <a href="#flagship">Flagship</a>
+        <a href="#projects">Builds</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Project filter
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('#projectsGrid .project-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        if (filter === 'all') {
+          card.classList.remove('hidden');
+        } else {
+          const cats = (card.dataset.cat || '').split(' ');
+          card.classList.toggle('hidden', !cats.includes(filter));
+        }
+      });
+    });
+  });
+
+  // Smooth-scroll for in-page links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href');
+      if (id.length > 1) {
+        const target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
