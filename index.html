@@ -8,12 +8,6 @@
 <meta property="og:title" content="Jeremy Serfling — Product Management Leader × AI Builder" />
 <meta property="og:description" content="Product Management Leader with 15+ years in B2B SaaS building agentic AI systems end-to-end." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://jeremyserfling.com" />
-<link rel="canonical" href="https://jeremyserfling.com" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content="https://jeremyserfling.com" />
-<meta name="twitter:title" content="Jeremy Serfling — Product Management Leader × AI Builder" />
-<meta name="twitter:description" content="Product Management Leader with 15+ years in B2B SaaS building agentic AI systems end-to-end." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -844,7 +838,309 @@
   }
   .footer-links a:hover { color: var(--accent); }
 
-  /* ─────────── REVEAL ANIMATIONS ─────────── */
+  /* ─────────── RESUME ─────────── */
+  .resume-section {
+    background: var(--bg-2);
+    border-top: 1px solid var(--line-soft);
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .resume-doc {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 64px 72px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    position: relative;
+  }
+  @media (max-width: 720px) {
+    .resume-doc { padding: 40px 28px; }
+  }
+
+  .resume-actions {
+    max-width: 920px;
+    margin: 0 auto 22px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .resume-actions .btn {
+    font-size: 12.5px;
+    padding: 10px 18px;
+  }
+
+  /* Resume header */
+  .resume-header {
+    text-align: center;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 38px;
+  }
+  .resume-name {
+    font-family: var(--serif);
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 10px;
+  }
+  .resume-title {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .resume-pillars {
+    font-size: 13px;
+    color: var(--text-2);
+    margin-bottom: 16px;
+  }
+  .resume-contact {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--text-3);
+    letter-spacing: 0.04em;
+  }
+  .resume-contact a {
+    color: var(--text-2);
+    transition: color 0.2s;
+    border-bottom: 1px dotted var(--line);
+  }
+  .resume-contact a:hover { color: var(--accent); border-color: var(--accent); }
+  .resume-contact .sep { color: var(--text-3); margin: 0 8px; }
+
+  /* Section header inside resume */
+  .resume-sect {
+    margin-bottom: 36px;
+  }
+  .resume-sect:last-child { margin-bottom: 0; }
+  .resume-sect-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--accent-line);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .resume-sect-title::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 1px;
+    flex-shrink: 0;
+  }
+
+  /* Summary paragraph */
+  .resume-summary {
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--text-2);
+  }
+  .resume-summary strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* Bullet list */
+  .resume-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .resume-bullets li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--text-2);
+  }
+  .resume-bullets li:last-child { margin-bottom: 0; }
+  .resume-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 8px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .resume-bullets li strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+  .resume-bullets li em {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  /* Skills grid */
+  .skills-block {
+    margin-bottom: 18px;
+  }
+  .skills-block:last-child { margin-bottom: 0; }
+  .skills-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .skills-list {
+    font-size: 13.5px;
+    color: var(--text-2);
+    line-height: 1.65;
+  }
+
+  /* Experience entry */
+  .exp-entry {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+  .exp-entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    margin-bottom: 4px;
+  }
+  .exp-company {
+    font-family: var(--serif);
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .exp-location {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--text-3);
+    letter-spacing: 0.04em;
+  }
+  .exp-role {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    margin-bottom: 6px;
+  }
+  .exp-title {
+    font-size: 14.5px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .exp-dates {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--text-2);
+    letter-spacing: 0.04em;
+  }
+  .exp-tagline {
+    font-size: 12.5px;
+    color: var(--text-3);
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+
+  .additional-exp {
+    font-size: 13px;
+    color: var(--text-2);
+    line-height: 1.7;
+    padding: 18px;
+    background: var(--bg-2);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+  }
+  .additional-exp strong { color: var(--text); }
+
+  /* Credentials grid (Education / Patents) */
+  .creds-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 720px) {
+    .creds-grid { grid-template-columns: 1fr; }
+  }
+  .cred-row {
+    padding: 16px 18px;
+    background: var(--bg-2);
+    border: 1px solid var(--line-soft);
+    border-radius: 6px;
+  }
+  .cred-row .cred-kind {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .cred-row .cred-main {
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 3px;
+  }
+  .cred-row .cred-sub {
+    font-size: 12px;
+    color: var(--text-2);
+    line-height: 1.4;
+  }
+
+  /* Print stylesheet */
+  @media print {
+    body { background: white !important; color: black !important; }
+    nav, footer, .hero, #flagship, #projects, #about, #philosophy, #contact,
+    .stats, .resume-actions, body::before { display: none !important; }
+    .resume-section { background: white !important; padding: 0 !important; border: none !important; }
+    .resume-doc {
+      background: white !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      max-width: 100% !important;
+    }
+    .resume-name, .exp-company, .resume-bullets li strong, .resume-bullets li em,
+    .resume-summary strong, .skills-list, .resume-summary, .resume-bullets li,
+    .exp-tagline, .additional-exp, .cred-row .cred-sub, .cred-row .cred-main,
+    .resume-pillars, .resume-contact, .resume-contact a, .exp-location, .exp-dates {
+      color: black !important;
+    }
+    .resume-title, .resume-sect-title, .skills-label, .cred-row .cred-kind,
+    .exp-title, .resume-sect-title::before, .resume-bullets li::before {
+      color: #c87a00 !important;
+      background-color: #c87a00 !important;
+    }
+    .resume-bullets li::before { background: #c87a00 !important; }
+    .resume-sect-title::before { background: #c87a00 !important; }
+    .cred-row, .additional-exp { background: #f7f7f7 !important; border-color: #ddd !important; }
+    .resume-sect-title { border-color: #c87a00 !important; }
+    .resume-header { border-color: #999 !important; }
+    .exp-entry { border-color: #ddd !important; page-break-inside: avoid; }
+    a { text-decoration: none !important; }
+    @page { margin: 0.6in 0.7in; }
+  }
   .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -867,6 +1163,7 @@
       <a href="#projects">All Builds</a>
       <a href="#about">About</a>
       <a href="#philosophy">Lessons</a>
+      <a href="#resume">Resume</a>
     </div>
     <a href="#contact" class="nav-cta">Get in touch →</a>
   </div>
@@ -1654,7 +1951,7 @@
           That's the wedge I'm building into. <strong>Domain expertise as the defensible moat, the build itself as the proof.</strong> Every project in this portfolio shipped because I designed the architecture, wrote the spec, made the model and protocol choices, and ran the integration loop end-to-end. Not vibe-coded. Designed.
         </p>
         <p>
-          I'm currently in conversations for <strong>Principal / Director AI Product roles</strong>. If you're building agentic systems that need a PM who can hold the technical depth and the customer truth in the same head — let's talk.
+          I'm currently in conversations for <strong>senior product leadership roles in B2B SaaS</strong> — where deep product fundamentals and hands-on AI fluency both matter. If you're building something that needs a PM who can hold the technical depth and the customer truth in the same head — let's talk.
         </p>
       </div>
 
@@ -1732,13 +2029,241 @@
   </div>
 </section>
 
+<!-- ─────────── RESUME ─────────── -->
+<section id="resume" class="resume-section">
+  <div class="container">
+    <div class="section-tag">Resume</div>
+    <h2 class="section-title">The complete <em>picture.</em></h2>
+    <p class="section-sub">15+ years of B2B SaaS product leadership across fintech, healthtech, and dental practice management — owning $25M+ portfolios, shipping AI in production, and now building agentic systems end-to-end. Click through, or download the full Word doc.</p>
+
+    <div class="resume-actions">
+      <a href="/Jeremy_Serfling_Resume.docx" download class="btn btn-primary">Download Word doc <span class="arrow">↓</span></a>
+      <button onclick="window.print()" class="btn">Print / Save as PDF</button>
+    </div>
+
+    <div class="resume-doc">
+
+      <!-- Header -->
+      <div class="resume-header">
+        <h1 class="resume-name">Jeremy Serfling</h1>
+        <div class="resume-title">Principal Product Manager  ·  Director of Product</div>
+        <div class="resume-pillars">B2B SaaS  ·  Health Tech  ·  Fintech  ·  AI Product Builder</div>
+        <div class="resume-contact">
+          Minneapolis–St. Paul Area, 55125
+          <span class="sep">·</span>
+          949-885-6498
+          <span class="sep">·</span>
+          <a href="mailto:Serf439@gmail.com">Serf439@gmail.com</a>
+          <span class="sep">·</span>
+          <a href="https://linkedin.com/in/jeremyserfling" target="_blank" rel="noopener">linkedin.com/in/jeremyserfling</a>
+        </div>
+      </div>
+
+      <!-- Professional Summary -->
+      <div class="resume-sect">
+        <div class="resume-sect-title">Professional Summary</div>
+        <p class="resume-summary">
+          Product leader with <strong>15+ years scaling B2B SaaS platforms</strong> across fintech and health tech — owning <strong>$25M+ portfolios</strong> and leading high-performing PM teams from strategy through execution. Proven track record shipping <strong>AI-powered products in production</strong>, with hands-on fluency across LLM pipelines, multi-agent orchestration, and full-stack AI product delivery.
+        </p>
+      </div>
+
+      <!-- Select Accomplishments -->
+      <div class="resume-sect">
+        <div class="resume-sect-title">Select Accomplishments</div>
+        <ul class="resume-bullets">
+          <li><strong>AI Product Builder</strong> — Independently designed and shipped production-grade agentic AI applications end-to-end, including an autonomous multi-agent product pipeline (<em>ProdAgentCo</em>) that executes market discovery, strategic planning, and build execution without human intervention — demonstrating hands-on fluency across LLM pipelines, multi-agent orchestration, Claude API, and full-stack AI delivery.</li>
+          <li><strong>Outcome-Driven Product Management</strong> — Built and led a 6-person product management team with clear portfolio operating priorities, decision frameworks anchored in value proposition, and execution aligned to customer impact, operational efficiency, and business outcomes.</li>
+          <li><strong>Strategic Partnerships</strong> — Identified, evaluated, and onboarded strategic technology partners across payments and RCM, driving partner-led capability expansion that generated <em>$5M+ in product revenue</em> while reducing build costs and accelerating time-to-market.</li>
+          <li><strong>Product Metrics</strong> — Defined and operationalized product OKRs and KPIs, including time to activation, adoption, revenue, and client efficiency metrics, that connected team execution to measurable business outcomes.</li>
+          <li><strong>Product Innovation</strong> — Co-authored <em>two U.S. technology patents</em>: a contextual office management system leveraging NLP and semantic analysis, and a device repair application using augmented reality and image recognition.</li>
+        </ul>
+      </div>
+
+      <!-- Relevant Skills -->
+      <div class="resume-sect">
+        <div class="resume-sect-title">Relevant Skills</div>
+
+        <div class="skills-block">
+          <div class="skills-label">AI &amp; Development Tools</div>
+          <div class="skills-list">Claude Code, Claude Managed Agents, OpenClaw, MCP, CrewAI, Next.js, TypeScript, LLM Integration, Azure OpenAI, ChatGPT, Replit, Vercel, Figma</div>
+        </div>
+        <div class="skills-block">
+          <div class="skills-label">Strategy &amp; Growth</div>
+          <div class="skills-list">Product Vision &amp; Strategy, Product-Led Growth, Roadmap Prioritization, Revenue &amp; Monetization, Business Case Development, B2B2C SaaS</div>
+        </div>
+        <div class="skills-block">
+          <div class="skills-label">Leadership &amp; Execution</div>
+          <div class="skills-list">Cross-Functional Leadership, Team Building &amp; Development, Stakeholder Management, Go-to-Market Execution, Strategic Partnerships</div>
+        </div>
+        <div class="skills-block">
+          <div class="skills-label">Product &amp; Data</div>
+          <div class="skills-list">Product Discovery &amp; Validation, OKRs &amp; KPIs, Data Analytics &amp; Insights, UX Optimization, AI-Assisted Product Development, Tableau, Power BI, SQL</div>
+        </div>
+        <div class="skills-block">
+          <div class="skills-label">Domain Expertise</div>
+          <div class="skills-list">Connected Health Platforms, EMR / Clinical Workflow, Revenue Cycle Management (RCM), Embedded Payments, SaaS Platform Management, API Strategy, Regulated Industries</div>
+        </div>
+        <div class="skills-block">
+          <div class="skills-label">Methodologies &amp; Frameworks</div>
+          <div class="skills-list">Agile, SAFe, Lean Six Sigma, Design Thinking, Full SDLC Ownership</div>
+        </div>
+        <div class="skills-block">
+          <div class="skills-label">Product Management Platforms</div>
+          <div class="skills-list">Confluence, Jira, Aha!, Pendo</div>
+        </div>
+      </div>
+
+      <!-- Professional Experience -->
+      <div class="resume-sect">
+        <div class="resume-sect-title">Professional Experience</div>
+
+        <!-- Planet DDS -->
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-company">Planet DDS</div>
+            <div class="exp-location">Orange County, CA</div>
+          </div>
+          <div class="exp-role">
+            <div class="exp-title">Sr. Product Manager, Revenue Cycle Automation &amp; Embedded Payments</div>
+            <div class="exp-dates">01/2023 – 10/2025</div>
+          </div>
+          <div class="exp-tagline">Leading dental practice management SaaS platform serving 13,000+ practices, with $100M+ ARR</div>
+          <ul class="resume-bullets">
+            <li><strong>Owned</strong> product vision, strategy, and end-to-end delivery for a large-scale, multi-tenant SaaS platform serving thousands of customers across regulated fintech and healthcare verticals — directly responsible for <em>$10M ARR</em> across revenue cycle products.</li>
+            <li><strong>Conceived and launched</strong> AI-powered Insurance Verification by engineering a multi-source data ingestion pipeline paired with an LLM reasoning layer across 300+ payers — cutting processing time by <em>60%</em>, eliminating thousands of hours of weekly manual work, and generating <em>$2M in new ARR</em>.</li>
+            <li><strong>Introduced</strong> AI-powered product development workflows across discovery, prototyping, and artifact creation — compressing planning and design cycles by <em>40%</em> and enabling the team to move from concept to build-ready in a fraction of the time, directly increasing throughput without adding headcount.</li>
+            <li><strong>Defined and executed</strong> automation and growth initiatives across the full product lifecycle — from problem discovery through delivery — contributing to <em>20% YoY revenue growth</em> and a <em>25% EBITDA improvement</em>.</li>
+            <li><strong>Built and managed</strong> outcome-driven roadmaps tied to activation, adoption, and monetization goals, backed by rigorous business cases, customer journey mapping, and prioritized requirements aligned to revenue and retention targets.</li>
+            <li><strong>Led</strong> product for SaaS-embedded payments, driving <em>$3B+ in payment volume</em> and <em>$5M ARR</em> through improved onboarding, time-to-first-transaction, feature attach rates, and scalable payment infrastructure.</li>
+            <li><strong>Streamlined</strong> onboarding and operational workflows through automation and UX optimization, delivering <em>20% efficiency gains</em> across implementation and customer success teams.</li>
+          </ul>
+        </div>
+
+        <!-- Equifax -->
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-company">Equifax</div>
+            <div class="exp-location">Atlanta, GA</div>
+          </div>
+          <div class="exp-role">
+            <div class="exp-title">Director Product Management, Fintech – Digital Lending Experience</div>
+            <div class="exp-dates">08/2016 – 03/2022</div>
+          </div>
+          <div class="exp-tagline">Leading global data and analytics company delivering credit intelligence, risk insights, and digital lending solutions</div>
+          <ul class="resume-bullets">
+            <li><strong>Built</strong> and led a 6-person product management team, owning portfolio strategy, coaching, and career development across a <em>$25M+ multi-product portfolio</em>.</li>
+            <li><strong>Partnered</strong> with executive leadership to shape portfolio strategy, investment priorities, and operating plans, translating business goals into measurable outcomes.</li>
+            <li><strong>Defined</strong> product vision, strategy, and roadmaps across a multi-product portfolio, translating business priorities into executable plans that drove measurable activation, adoption, and growth.</li>
+            <li><strong>Owned</strong> roadmap prioritization for a data analytics and insights portfolio, driving <em>25% YoY revenue growth</em> and adoption by top-tier financial institutions.</li>
+            <li><strong>Championed</strong> a first-of-its-kind enhanced mortgage credit risk product leveraging differentiated alternative data sources — expanding credit access for underserved borrowers while driving double-digit portfolio growth and adoption by top-tier financial institutions.</li>
+          </ul>
+        </div>
+
+        <!-- ClosingCorp -->
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-company">Closing Corp (acquired by CoreLogic)</div>
+            <div class="exp-location">San Diego, CA</div>
+          </div>
+          <div class="exp-role">
+            <div class="exp-title">Director Product Management, Fintech – Data Insights &amp; Workflow</div>
+            <div class="exp-dates">06/2015 – 08/2016</div>
+          </div>
+          <div class="exp-tagline">Leading provider of real estate closing cost data and analytics, powering fee transparency and workflow efficiency</div>
+          <ul class="resume-bullets">
+            <li><strong>Launched</strong> SmartFee 2.0 with supporting ROI models and stakeholder alignment, delivering <em>30% YoY revenue growth</em>.</li>
+            <li><strong>Modernized</strong> the core UX and streamlined onboarding and administration tools, improving platform efficiency and client experience.</li>
+          </ul>
+        </div>
+
+        <!-- First American -->
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-company">First American Financial Corporation</div>
+            <div class="exp-location">Orange County, CA</div>
+          </div>
+          <div class="exp-role">
+            <div class="exp-title">Director Product Management, Fintech – Digital Experience</div>
+            <div class="exp-dates">06/2014 – 06/2015</div>
+          </div>
+          <div class="exp-tagline">Leading Fortune 500 provider of real estate technology solutions powering the U.S. mortgage ecosystem</div>
+          <ul class="resume-bullets">
+            <li><strong>Defined</strong> and executed product strategy and roadmap in partnership with sales, business development, and marketing to identify and prioritize high-value opportunities.</li>
+            <li><strong>Built</strong> market sizing analyses, competitive assessments, and ROI models to support investment decisions across the product portfolio.</li>
+          </ul>
+        </div>
+
+        <!-- Canon -->
+        <div class="exp-entry">
+          <div class="exp-header">
+            <div class="exp-company">Canon Research &amp; Development</div>
+            <div class="exp-location">Orange County, CA</div>
+          </div>
+          <div class="exp-role">
+            <div class="exp-title">Sr. Product Manager, Information Intelligence</div>
+            <div class="exp-dates">10/2007 – 04/2014</div>
+          </div>
+          <div class="exp-tagline">The advanced R&amp;D Division of Canon Inc., pioneering intelligent office and document technologies for global enterprise markets</div>
+          <ul class="resume-bullets">
+            <li><strong>Defined</strong> product plans, priorities, requirements, and roadmaps; collaborated with development teams to translate business cases into technical designs.</li>
+            <li><strong>Created</strong> and integrated a framework for identifying strategic partnerships with innovative technology companies based in Silicon Valley; connected with <em>100+ startups annually</em> to gather feedback for leadership in Japan.</li>
+          </ul>
+        </div>
+
+        <!-- Additional -->
+        <div class="additional-exp">
+          <strong>Additional Experience:</strong> Senior Program Manager, Digital Mortgage Platform — First American Financial (2006–2007)  ·  Senior Consultant, Decision Systems &amp; Automation — Fannie Mae (2000–2006)
+        </div>
+      </div>
+
+      <!-- Education, Certifications & Patents -->
+      <div class="resume-sect">
+        <div class="resume-sect-title">Education, Certifications &amp; Patents</div>
+        <div class="creds-grid">
+          <div class="cred-row">
+            <div class="cred-kind">Education</div>
+            <div class="cred-main">Master of Science in Information Systems</div>
+            <div class="cred-sub">The George Washington University</div>
+          </div>
+          <div class="cred-row">
+            <div class="cred-kind">Education</div>
+            <div class="cred-main">Bachelor of Science in Finance</div>
+            <div class="cred-sub">University of Minnesota, Carlson School of Management</div>
+          </div>
+          <div class="cred-row">
+            <div class="cred-kind">Certification</div>
+            <div class="cred-main">Lean Six Sigma Green Belt (LSS)</div>
+            <div class="cred-sub">Certified 2015</div>
+          </div>
+          <div class="cred-row">
+            <div class="cred-kind">Certification</div>
+            <div class="cred-main">Scrum Master Certified (SMC)</div>
+            <div class="cred-sub">Certified 2013</div>
+          </div>
+          <div class="cred-row">
+            <div class="cred-kind">U.S. Patent · 2018</div>
+            <div class="cred-main">Devices, Systems, and Methods for Context Management</div>
+            <div class="cred-sub">Patent No. 9,922,092  ·  NLP &amp; semantic analysis</div>
+          </div>
+          <div class="cred-row">
+            <div class="cred-kind">U.S. Patent · 2016</div>
+            <div class="cred-main">Printing System, Image Forming Apparatus</div>
+            <div class="cred-sub">Patent No. 9,235,819  ·  AR &amp; image recognition</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ─────────── CONTACT ─────────── -->
 <section id="contact" class="contact">
   <div class="container">
-    <h2>Let's <em>talk shop.</em></h2>
-    <p>If you're hiring a Principal / Director PM for agentic AI, building something interesting at the protocol layer, or just want to compare notes on Symphony patterns — reach out.</p>
+    <h2>Let's <em>connect.</em></h2>
+    <p>If you're hiring a product leader for B2B SaaS, reach out. Fintech, healthtech, payments, and beyond — happy to discuss roles where deep product fundamentals and hands-on AI fluency both matter.</p>
     <div class="contact-actions">
-      <a href="mailto:jeremyserfling@gmail.com" class="btn btn-primary">jeremyserfling@gmail.com <span class="arrow">→</span></a>
+      <a href="mailto:Serf439@gmail.com" class="btn btn-primary">Serf439@gmail.com <span class="arrow">→</span></a>
       <a href="https://www.linkedin.com/in/jeremyserfling" target="_blank" rel="noopener" class="btn">LinkedIn</a>
       <a href="https://github.com/Vikings1234" target="_blank" rel="noopener" class="btn">GitHub</a>
     </div>
