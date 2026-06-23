@@ -8,12 +8,6 @@
 <meta property="og:title" content="Jeremy Serfling — Product Management Leader × AI Builder" />
 <meta property="og:description" content="Product Management Leader with 15+ years in B2B SaaS building agentic AI systems end-to-end." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://jeremyserfling.com" />
-<link rel="canonical" href="https://jeremyserfling.com" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content="https://jeremyserfling.com" />
-<meta name="twitter:title" content="Jeremy Serfling — Product Management Leader × AI Builder" />
-<meta name="twitter:description" content="Product Management Leader with 15+ years in B2B SaaS building agentic AI systems end-to-end." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -1349,30 +1343,6 @@
   </div>
 </header>
 
-<!-- ─────────── STATS ─────────── -->
-<section class="stats" style="padding: 50px 0;">
-  <div class="container">
-    <div class="stats-grid">
-      <div>
-        <div class="stat-label">PM Experience</div>
-        <div class="stat-value">15+<span class="unit">years · fintech · healthtech · B2B SaaS</span></div>
-      </div>
-      <div>
-        <div class="stat-label">Portfolio Led</div>
-        <div class="stat-value">$25M+<span class="unit">Director · 6-PM team</span></div>
-      </div>
-      <div>
-        <div class="stat-label">ARR Owned</div>
-        <div class="stat-value">$10M<span class="unit">RCM &amp; payments · $2M from AI</span></div>
-      </div>
-      <div>
-        <div class="stat-label">Payments Volume</div>
-        <div class="stat-value">$3B+<span class="unit">SaaS-embedded scale</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ─────────── FLAGSHIP BUILDS ─────────── -->
 <section id="flagship">
   <div class="container">
@@ -1382,11 +1352,120 @@
 
     <div class="featured-grid">
 
-      <!-- CONDUCTOR (FLAGSHIP) -->
+      <!-- CONDUCTOR PM (NEW FLAGSHIP) -->
       <div class="featured-card flagship reveal">
         <div class="card-tile">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pre-build feasibility simulator with three probes converging to a confidence score and prescriptive recommendation">
+            <text x="20" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" letter-spacing="0.12em">PRE-BUILD FEASIBILITY · 30 MIN INSTEAD OF 3 WEEKS</text>
+            <circle cx="580" cy="14" r="3" fill="#f5a623">
+              <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Left: 8-field intake represented as a small filled checklist -->
+            <g font-family="JetBrains Mono, monospace" font-size="7.5">
+              <rect x="14" y="36" width="76" height="108" rx="4" fill="#16161a" stroke="#26262d"/>
+              <text x="20" y="48" fill="#6b6b75" letter-spacing="0.08em">INTAKE</text>
+              <text x="20" y="59" fill="#a1a1aa">▣ job</text>
+              <text x="20" y="71" fill="#a1a1aa">▣ pattern</text>
+              <text x="20" y="83" fill="#a1a1aa">▣ tools</text>
+              <text x="20" y="95" fill="#a1a1aa">▣ trigger</text>
+              <text x="20" y="107" fill="#a1a1aa">▣ success</text>
+              <text x="20" y="119" fill="#a1a1aa">▣ tolerance</text>
+              <text x="20" y="131" fill="#a1a1aa">▣ volume</text>
+              <text x="20" y="142" fill="#a1a1aa">▣ latency</text>
+            </g>
+
+            <!-- Connection from intake to probes -->
+            <path d="M 92 90 L 112 90" stroke="rgba(245,166,35,0.4)" stroke-width="1" fill="none" stroke-dasharray="3,3"/>
+
+            <!-- Middle: Three probe lanes with worked support-ticket scores -->
+            <g font-family="JetBrains Mono, monospace" font-size="8">
+              <!-- Eval-Signal: 38/100 (red — eval-blocked) -->
+              <rect x="115" y="38" width="240" height="30" rx="4" fill="#16161a" stroke="rgba(239,68,68,0.45)"/>
+              <text x="124" y="51" fill="#ededee" font-weight="600">EVAL-SIGNAL</text>
+              <text x="124" y="62" fill="#6b6b75" font-size="7">judge can distinguish good vs bad?</text>
+              <text x="345" y="58" text-anchor="end" fill="#ef4444" font-weight="700" font-size="11">38</text>
+
+              <!-- Tool-Composability: 71/100 (green) -->
+              <rect x="115" y="76" width="240" height="30" rx="4" fill="#16161a" stroke="rgba(74,222,128,0.45)"/>
+              <text x="124" y="89" fill="#ededee" font-weight="600">TOOL-COMPOSE</text>
+              <text x="124" y="100" fill="#6b6b75" font-size="7">do declared tools compose cleanly?</text>
+              <text x="345" y="96" text-anchor="end" fill="#4ade80" font-weight="700" font-size="11">71</text>
+
+              <!-- Failure-Tolerance: 62/100 (amber) -->
+              <rect x="115" y="114" width="240" height="30" rx="4" fill="#16161a" stroke="rgba(245,166,35,0.45)"/>
+              <text x="124" y="127" fill="#ededee" font-weight="600">FAILURE-TOL</text>
+              <text x="124" y="138" fill="#6b6b75" font-size="7">is the worst failure HITL-mitigable?</text>
+              <text x="345" y="134" text-anchor="end" fill="#f5a623" font-weight="700" font-size="11">62</text>
+            </g>
+
+            <!-- Converging arrows -->
+            <g stroke="rgba(245,166,35,0.35)" stroke-width="1" fill="none">
+              <path d="M 357 53 Q 390 53 410 90"/>
+              <path d="M 357 91 L 410 91"/>
+              <path d="M 357 129 Q 390 129 410 92"/>
+            </g>
+
+            <!-- Right: Composite score + recommendation -->
+            <g>
+              <rect x="412" y="40" width="170" height="100" rx="6" fill="#16161a" stroke="#f5a623"/>
+              <text x="497" y="56" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#6b6b75" letter-spacing="0.1em">COMPOSITE</text>
+              <text x="497" y="86" text-anchor="middle" font-family="Instrument Serif, serif" font-size="36" fill="#f5a623" font-style="italic">57</text>
+              <text x="497" y="100" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7" fill="#6b6b75" letter-spacing="0.08em">/ 100</text>
+
+              <!-- GO/PAUSE/KILL bands -->
+              <g font-family="JetBrains Mono, monospace" font-size="7" letter-spacing="0.08em">
+                <rect x="420" y="112" width="48" height="18" rx="3" fill="#0a0a0b" stroke="rgba(74,222,128,0.3)"/>
+                <text x="444" y="124" text-anchor="middle" fill="#6b6b75">GO</text>
+
+                <rect x="473" y="112" width="48" height="18" rx="3" fill="rgba(245,166,35,0.18)" stroke="#f5a623"/>
+                <text x="497" y="124" text-anchor="middle" fill="#f5a623" font-weight="700">PAUSE</text>
+
+                <rect x="526" y="112" width="48" height="18" rx="3" fill="#0a0a0b" stroke="rgba(239,68,68,0.3)"/>
+                <text x="550" y="124" text-anchor="middle" fill="#6b6b75">KILL</text>
+              </g>
+            </g>
+
+            <!-- Bottom legend -->
+            <text x="20" y="167" font-family="JetBrains Mono, monospace" font-size="7" fill="#6b6b75" letter-spacing="0.06em">WORKED EXAMPLE · SUPPORT-TICKET ROUTING · 3 RANKED RISKS · 1 MOVE UNBLOCKS A GO</text>
+          </svg>
+        </div>
+        <div class="card-header">
+          <div class="card-id">// 01 — strategic brief</div>
+          <div class="card-status flagship">★ Flagship · Product Brief v0.6</div>
+        </div>
+        <h2 class="card-title">Conductor PM</h2>
+        <p class="card-tagline">
+          A pre-build feasibility simulator for AI agent products. A product manager describes a proposed agent in 8 questions. Twenty minutes later, they walk into the kickoff with a confidence score and the three risks most likely to kill the project — each with a specific mitigation move.
+        </p>
+        <p class="card-desc">
+          The pattern today is to start building an agent on a hunch and discover three weeks in that the eval signal is too noisy to ship. The wasted sprint costs <strong>$80K–$200K loaded</strong>, plus credibility. Gartner forecasts <strong>40%+ of agentic AI projects will be cancelled by end of 2027</strong>. Conductor PM attacks the decision that precedes all three. A scan of fifteen agent-eval platforms — LangSmith, Braintrust, Arize, Maxim, Coval — confirms the wedge: every one scores a <em>built</em> agent. None scores a <em>described</em> one. Three probes run in parallel: eval-signal noise, tool-call composability, failure-mode tolerance. Output: 0–100 score + 3 ranked risks + prescriptive GO / PAUSE / KILL.
+          <br /><br />
+          <em style="color: var(--accent); font-style: normal; font-weight: 500;">The differentiator:</em> A PM-native buyer at a different moment than the eval incumbents. They sell to engineers after the build. Conductor PM sells to product leaders before the spend — and tells them what their team would otherwise learn in three weeks.
+        </p>
+        <div class="card-meta">
+          <div class="meta-label">Stack</div>
+          <div class="meta-value">Next.js · Vercel · Supabase · Claude API</div>
+          <div class="meta-label">Models</div>
+          <div class="meta-value">Claude Sonnet 4.6 (the three probes) · Haiku 4.5 (synthetic case generation) — Sonnet does judgment-grade reasoning; Haiku is dirt-cheap synthesis. ~$0.40–$0.80 per simulation</div>
+          <div class="meta-label">What's different</div>
+          <div class="meta-value">PM-native buyer · before the build · prescriptive call (GO / PAUSE / KILL) instead of softened confidence bands</div>
+        </div>
+        <div class="stack">
+          <span class="stack-item">Next.js</span>
+          <span class="stack-item">Vercel</span>
+          <span class="stack-item">Supabase</span>
+          <span class="stack-item">Claude Sonnet 4.6</span>
+          <span class="stack-item">Claude Haiku 4.5</span>
+          <span class="stack-item">Apache 2.0 OSS</span>
+        </div>
+      </div>
+
+      <!-- CONDUCTOR (working build, demoted from flagship) -->
+      <div class="featured-card reveal">
+        <div class="card-tile">
           <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Linear ticket spawning agent workers gated by evals">
-            <text x="20" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" letter-spacing="0.12em">SYMPHONY PATTERN · LINEAR AS CONTROL PLANE</text>
+            <text x="20" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" letter-spacing="0.12em">LINEAR TICKET · AI AGENTS · HUMAN APPROVAL</text>
             <circle cx="580" cy="14" r="3" fill="#4ade80">
               <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
             </circle>
@@ -1438,23 +1517,27 @@
           </svg>
         </div>
         <div class="card-header">
-          <div class="card-id">// 01 — current build</div>
-          <div class="card-status flagship">★ Flagship · In flight</div>
+          <div class="card-id">// 02 — working build</div>
+          <div class="card-status building">14-day build · in flight</div>
         </div>
         <h2 class="card-title">Conductor</h2>
         <p class="card-tagline">
-          Linear as a control plane for non-coding AI agents. Takes OpenAI's Symphony pattern out of engineering and into the work nobody automates well yet — marketing ops, RevOps, SEO, lifecycle, customer experience.
+          Most "AI for marketing" tools generate content. Conductor manages the work. It plugs into Linear — the tool engineering teams already trust to track tasks — and turns it into a control panel for AI agents that do the actual job: drafting campaigns, refreshing copy, running competitive scans — gated by human approval at every step.
         </p>
         <p class="card-desc">
-          When OpenAI open-sourced Symphony, the headline was a <strong>500% landed-PR uplift</strong>. The real story was that an issue tracker is the cleanest control plane an autonomous agent has ever had. Conductor extends that pattern into non-coding workflows using the <strong>Anthropic Advisor architecture</strong> — Claude Opus 4.7 reasoning + Haiku 4.5 executors — running on Claude Managed Agents' outcomes-graded multiagent infrastructure with webhooks. 14-day build. Open-source, eval-gated, model-agnostic.
+          The breakthrough is the control panel. Engineering teams already use issue trackers like Linear to assign work, track progress, and approve completion. Conductor uses that same workflow — but the "worker" is an AI agent, and the "manager" is the human in charge. Each ticket becomes an autonomous task: research, draft, refine, hand back for review. <strong>Built for the work most companies aren't automating well yet</strong> — marketing ops, RevOps, lifecycle, customer experience. Open-source, runs on Claude, 14-day build.
+          <br /><br />
+          <em style="color: var(--accent); font-style: normal; font-weight: 500;">The differentiator:</em> Conductor is built on top of OpenAI's Symphony pattern — originally designed for engineering workflows — and extends that same approval-gated control panel into marketing, RevOps, and lifecycle teams.
         </p>
         <div class="card-meta">
           <div class="meta-label">Stack</div>
           <div class="meta-value">Claude Opus 4.7 · Haiku 4.5 · Managed Agents · Linear API · Vercel · Braintrust</div>
-          <div class="meta-label">Pattern</div>
-          <div class="meta-value">Symphony · Advisor · Outcomes-graded eval gates</div>
-          <div class="meta-label">Differentiation</div>
-          <div class="meta-value">Symphony pattern + Anthropic stack + non-coding ICP — wedge no competitor occupies</div>
+          <div class="meta-label">Models</div>
+          <div class="meta-value">Opus 4.7 for strategic reasoning · Haiku 4.5 for execution — the Anthropic Advisor pattern. Opus is overkill for fetching a Linear ticket; Haiku is underpowered for synthesis. Routing keeps cost low without quality loss.</div>
+          <div class="meta-label">How it works</div>
+          <div class="meta-value">Multi-agent workflow with human-in-the-loop approval gates</div>
+          <div class="meta-label">What's different</div>
+          <div class="meta-value">Built for marketing &amp; RevOps teams, not engineering teams — a space no competitor occupies</div>
         </div>
         <div class="stack">
           <span class="stack-item">TypeScript</span>
@@ -1463,6 +1546,108 @@
           <span class="stack-item">Managed Agents</span>
           <span class="stack-item">Linear MCP</span>
           <span class="stack-item">Braintrust</span>
+          <span class="stack-item">Vercel</span>
+        </div>
+      </div>
+
+      <!-- THROUGHLINE -->
+      <div class="featured-card reveal">
+        <div class="card-tile">
+          <svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Payment reconciliation dashboard showing matched and exception transactions across card and stablecoin rails">
+            <text x="20" y="18" font-family="JetBrains Mono, monospace" font-size="9" fill="#f5a623" letter-spacing="0.12em">RECONCILIATION FOR AGENTIC PAYMENTS</text>
+            <text x="580" y="18" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#6b6b75">LAST 30 DAYS</text>
+
+            <!-- KPI row -->
+            <g font-family="JetBrains Mono, monospace">
+              <rect x="20" y="30" width="135" height="32" rx="4" fill="#16161a" stroke="#26262d"/>
+              <text x="29" y="44" font-size="7" fill="#6b6b75" letter-spacing="0.08em">MATCH RATE</text>
+              <text x="29" y="57" font-size="13" fill="#4ade80" font-weight="700">92%</text>
+
+              <rect x="160" y="30" width="135" height="32" rx="4" fill="#16161a" stroke="#26262d"/>
+              <text x="169" y="44" font-size="7" fill="#6b6b75" letter-spacing="0.08em">SETTLED</text>
+              <text x="169" y="57" font-size="13" fill="#ededee" font-weight="700">9 <tspan font-size="8" fill="#6b6b75">/ 11</tspan></text>
+
+              <rect x="300" y="30" width="135" height="32" rx="4" fill="#16161a" stroke="rgba(245,166,35,0.45)"/>
+              <text x="309" y="44" font-size="7" fill="#6b6b75" letter-spacing="0.08em">EXCEPTIONS</text>
+              <text x="309" y="57" font-size="13" fill="#f5a623" font-weight="700">3 <tspan font-size="8" fill="#6b6b75">need review</tspan></text>
+
+              <rect x="440" y="30" width="140" height="32" rx="4" fill="#16161a" stroke="#26262d"/>
+              <text x="449" y="44" font-size="7" fill="#6b6b75" letter-spacing="0.08em">RAILS</text>
+              <text x="449" y="57" font-size="10" fill="#ededee" font-weight="600">card · USDC · ACH</text>
+            </g>
+
+            <!-- Transaction rows -->
+            <g font-family="JetBrains Mono, monospace" font-size="8">
+              <!-- Row 1: matched -->
+              <rect x="20" y="70" width="560" height="20" rx="3" fill="#0a0a0b" stroke="#1d1d22"/>
+              <text x="28" y="83" fill="#6b6b75">md_e7a2</text>
+              <text x="98" y="83" fill="#ededee">$1,245.00</text>
+              <text x="180" y="83" fill="#6b6b75">stripe</text>
+              <text x="230" y="83" fill="#6b6b75">card</text>
+              <circle cx="555" cy="80" r="4" fill="#4ade80"/>
+              <text x="500" y="83" fill="#4ade80" text-anchor="end">matched</text>
+
+              <!-- Row 2: matched -->
+              <rect x="20" y="92" width="560" height="20" rx="3" fill="#0a0a0b" stroke="#1d1d22"/>
+              <text x="28" y="105" fill="#6b6b75">md_8b91</text>
+              <text x="98" y="105" fill="#ededee">$890.00</text>
+              <text x="180" y="105" fill="#6b6b75">adyen</text>
+              <text x="230" y="105" fill="#6b6b75">card</text>
+              <circle cx="555" cy="102" r="4" fill="#4ade80"/>
+              <text x="500" y="105" fill="#4ade80" text-anchor="end">matched</text>
+
+              <!-- Row 3: over-threshold -->
+              <rect x="20" y="114" width="560" height="20" rx="3" fill="#0a0a0b" stroke="rgba(245,166,35,0.3)"/>
+              <text x="28" y="127" fill="#6b6b75">md_4f3c</text>
+              <text x="98" y="127" fill="#ededee">$2,100.00</text>
+              <text x="180" y="127" fill="#6b6b75">x402</text>
+              <text x="230" y="127" fill="#6b6b75">USDC</text>
+              <circle cx="555" cy="124" r="4" fill="#f5a623"/>
+              <text x="500" y="127" fill="#f5a623" text-anchor="end">over-threshold</text>
+
+              <!-- Row 4: duplicate settlement -->
+              <rect x="20" y="136" width="560" height="20" rx="3" fill="#0a0a0b" stroke="rgba(239,68,68,0.3)"/>
+              <text x="28" y="149" fill="#6b6b75">md_d52a</text>
+              <text x="98" y="149" fill="#ededee">$450.00</text>
+              <text x="180" y="149" fill="#6b6b75">stripe</text>
+              <text x="230" y="149" fill="#6b6b75">card</text>
+              <circle cx="555" cy="146" r="4" fill="#ef4444"/>
+              <text x="500" y="149" fill="#ef4444" text-anchor="end">duplicate settlement</text>
+            </g>
+
+            <!-- Bottom legend -->
+            <text x="20" y="173" font-family="JetBrains Mono, monospace" font-size="7" fill="#6b6b75" letter-spacing="0.06em">POST-SETTLEMENT EXCEPTIONS · CARD &amp; STABLECOIN RAILS · ONE TRAIL ACROSS EVERY RAIL</text>
+          </svg>
+        </div>
+        <div class="card-header">
+          <div class="card-id">// 03</div>
+          <div class="card-status live">Live prototype</div>
+        </div>
+        <h2 class="card-title">Throughline</h2>
+        <p class="card-tagline">
+          Reconciliation for agentic payments. As autonomous agents transact across cards, stablecoins, and ACH, the reconciliation surface fragments. Throughline catches the exceptions a finance team can't afford to miss — amount mismatches, duplicate settlements, over-threshold authorizations — across every rail.
+        </p>
+        <p class="card-desc">
+          Built on direct payments expertise — <strong>$3B+ in embedded payments volume at Planet DDS</strong>, plus payment-orchestration architecture experience. The premise: when AI agents start moving money on their own, the gaps that humans used to catch in spreadsheet reconciliations become structural. Throughline sits post-settlement and detects three exception types — <em>amount mismatch</em>, <em>over-threshold authorization</em>, <em>duplicate settlement</em> — across card and stablecoin rails uniformly. Built as a portfolio piece to demonstrate domain expertise meeting agentic commerce.
+          <br /><br />
+          <em style="color: var(--accent); font-style: normal; font-weight: 500;">The differentiator:</em> Most "AI for payments" pitches generate marketing copy. Throughline solves the actual operations problem agentic commerce creates — reconciliation surface fragmentation as agents move money across rails — using the same finance-grade rigor incumbents apply to human-initiated transactions.
+        </p>
+        <div class="card-meta">
+          <div class="meta-label">Stack</div>
+          <div class="meta-value">Next.js · Tailwind · Supabase · Claude API · light-theme editorial UI (Linear / Mercury register)</div>
+          <div class="meta-label">Models</div>
+          <div class="meta-value">Claude Sonnet 4.6 for exception reasoning across rails (the hard work is matching semantically equivalent transactions whose shapes differ by processor) · Haiku 4.5 for fast filtering of the matched majority before the expensive call</div>
+          <div class="meta-label">How it works</div>
+          <div class="meta-value">Post-settlement record-by-record review · KPI tiles for trust at a glance · drill-down evidence drawer for each exception</div>
+          <div class="meta-label">What's different</div>
+          <div class="meta-value">Built on actual payments domain expertise · finance-grade integrity discipline · agentic-commerce-native, not retrofit</div>
+        </div>
+        <div class="stack">
+          <span class="stack-item">Next.js</span>
+          <span class="stack-item">Tailwind</span>
+          <span class="stack-item">Supabase</span>
+          <span class="stack-item">Claude Sonnet 4.6</span>
+          <span class="stack-item">Claude Haiku 4.5</span>
           <span class="stack-item">Vercel</span>
         </div>
       </div>
@@ -1534,7 +1719,7 @@
           </svg>
         </div>
         <div class="card-header">
-          <div class="card-id">// 02</div>
+          <div class="card-id">// 04</div>
           <div class="card-status live">Running daily at 6 AM CT</div>
         </div>
         <h2 class="card-title">ProdAgentCo</h2>
@@ -1542,8 +1727,12 @@
           Autonomous multi-agent product pipeline that ideates, debates, plans, and builds a new product daily — without me.
         </p>
         <p class="card-desc">
-          Daily 6 AM autonomous runs via Mac LaunchAgent: <strong>Discovery → CEO Debate → Gate 1 → 7 Planning agents → Gate 2 → Build → Gate 3</strong>. Three HITL approvals through Telegram. CEO Debate Layer surfaces risk through opposed PM/CTO/CFO/Marketing/Legal agents before the synthesizer renders GO / NO-GO / NEEDS_REVIEW. Model routing: Groq + Haiku for workers, Sonnet for reasoning roles — major cost reduction without quality loss.
+          Daily 6 AM autonomous runs via Mac LaunchAgent: <strong>Discovery → CEO Debate → Gate 1 → 7 Planning agents → Gate 2 → Build → Gate 3</strong>. Three HITL approvals through Telegram. CEO Debate Layer surfaces risk through opposed PM/CTO/CFO/Marketing/Legal agents before the synthesizer renders GO / NO-GO / NEEDS_REVIEW.
         </p>
+        <div class="card-meta">
+          <div class="meta-label">Models</div>
+          <div class="meta-value">Claude Sonnet 4.6 for the CEO Debate and reasoning roles (PM / CTO / CFO / Marketing / Legal agents) · Groq + Haiku 4.5 for the mechanical worker agents — reserves the expensive reasoning for what actually needs judgment. Major cost reduction without quality loss.</div>
+        </div>
         <div class="stack">
           <span class="stack-item">CrewAI</span>
           <span class="stack-item">Anthropic API</span>
@@ -1612,7 +1801,7 @@
           </svg>
         </div>
         <div class="card-header">
-          <div class="card-id">// 03</div>
+          <div class="card-id">// 05</div>
           <div class="card-status building">Session 5 · 232/232 tests passing</div>
         </div>
         <h2 class="card-title">Tribunal</h2>
@@ -1622,6 +1811,10 @@
         <p class="card-desc">
           Three Sonnet agents on <strong>Claude Code Agent Teams</strong>, restricted to messaging primitives — no tools, no web — debating over a SignalBundle assembled from Databento market state, SEC EDGAR filings, Alpha Vantage news, and Finnhub catalysts. <strong>Completeness gate</strong>: bundles below 90% don't go to debate. First live run validated the architecture — Bear caught Bull on incorrect base-rate arithmetic; Bull conceded. The disagreement is the product.
         </p>
+        <div class="card-meta">
+          <div class="meta-label">Models</div>
+          <div class="meta-value">Claude Sonnet 4.6 across all three agents (Bull, Bear, Contrarian). Adversarial reasoning needs sustained chain-of-thought — routing any of the three to Haiku would collapse the debate quality and the disagreement-as-signal vanishes.</div>
+        </div>
         <div class="stack">
           <span class="stack-item">Python 3.11</span>
           <span class="stack-item">Pydantic v2</span>
@@ -1675,7 +1868,7 @@
           </svg>
         </div>
         <div class="card-header">
-          <div class="card-id">// 04</div>
+          <div class="card-id">// 06</div>
           <div class="card-status building">Round 6 · 14 tests green · 5 ADRs</div>
         </div>
         <h2 class="card-title">Convergence Scanner</h2>
@@ -1685,9 +1878,14 @@
         <p class="card-desc">
           Bloomberg fuses this for $24K/year. Nothing under $5K does. Convergence Scanner watches for <strong>anomalous order flow in a macro-sensitive instrument</strong>, a <strong>concurrent Polymarket odds shift on a related event</strong>, and <strong>silence on the news wire</strong> — and fires a Telegram alert with a Claude-generated hypothesis when all three align. Not a front-running tool; a tailing tool on public order flow you can see.
         </p>
+        <div class="card-meta">
+          <div class="meta-label">Models</div>
+          <div class="meta-value">Claude Haiku 4.5 watches the three signals constantly — cheap to monitor 24/7. Only when all three converge does the system call Sonnet 4.6 for hypothesis generation — the expensive model fires once per real signal, not once per tick.</div>
+        </div>
         <div class="stack">
           <span class="stack-item">Python / CrewAI</span>
-          <span class="stack-item">Claude Sonnet + Haiku</span>
+          <span class="stack-item">Claude Sonnet 4.6</span>
+          <span class="stack-item">Claude Haiku 4.5</span>
           <span class="stack-item">Databento</span>
           <span class="stack-item">Polymarket CLOB</span>
           <span class="stack-item">Supabase</span>
@@ -1698,7 +1896,7 @@
       <!-- JOB SEARCH AGENT V2 -->
       <div class="featured-card reveal">
         <div class="card-header">
-          <div class="card-id">// 05</div>
+          <div class="card-id">// 07</div>
           <div class="card-status live">Live · v2-session8</div>
         </div>
         <h2 class="card-title">Job Search Agent <em>v2</em></h2>
@@ -1708,6 +1906,10 @@
         <p class="card-desc">
           V1 used a Managed Agent to search jobs (slow, fragile, 9 production bugs). V2 collapses that layer to SerpAPI + Haiku scoring (5–8 sec end to end) and reserves Managed Agents for what actually needs reasoning — a <strong>5-tab materials pipeline</strong>: Resume Tailor, LinkedIn Outreach, Cover Letter, Company Intel (live web search), Interview Prep. A Grader agent writes to Turso memory; future runs read those signals back into prompts. Adaptive without overcorrection.
         </p>
+        <div class="card-meta">
+          <div class="meta-label">Models</div>
+          <div class="meta-value">Claude Haiku 4.5 for the fast job-fit scoring pass (5–8 sec end-to-end) · Claude Managed Agents (Sonnet-class) for the materials pipeline where reasoning depth matters. Earlier versions used Sonnet on every job — the cost-per-scan dropped 80% with no fit-quality loss after the switch.</div>
+        </div>
         <div class="stack">
           <span class="stack-item">Next.js 16</span>
           <span class="stack-item">TypeScript</span>
@@ -1775,7 +1977,7 @@
           </svg>
         </div>
         <div class="card-header">
-          <div class="card-id">// 06</div>
+          <div class="card-id">// 08</div>
           <div class="card-status building">Working prototype</div>
         </div>
         <h2 class="card-title">Autonomous Agent Wallet <em>— AP2</em></h2>
@@ -1785,9 +1987,14 @@
         <p class="card-desc">
           User intent ($700, Palm Springs, first weekend of November) → prime agent negotiates simultaneously with airline + hotel sub-agents → <strong>dual cryptographically-linked Cart Mandates</strong> execute in one atomic transaction → flight + hotel receipts written together or rolled back together. A 4-agent topology (Gemini Pro prime + three Flash sub-agents) at <strong>64% cost reduction</strong> vs all-Pro without quality loss. The <code>coordinated_booking_id</code> is the proof both receipts came from one Cart Mandate.
         </p>
+        <div class="card-meta">
+          <div class="meta-label">Models</div>
+          <div class="meta-value">Gemini 2.5 Pro orchestrates the booking flow (mandate generation, atomic commit logic) · Gemini 2.5 Flash handles each sub-agent (flight search, hotel search). 64% cost reduction vs all-Pro topology, no quality loss. Built on Google's models because AP2 is a Google-led protocol — demonstrates the pattern in its native habitat.</div>
+        </div>
         <div class="stack">
           <span class="stack-item">Python</span>
-          <span class="stack-item">Gemini Pro &amp; Flash</span>
+          <span class="stack-item">Gemini 2.5 Pro</span>
+          <span class="stack-item">Gemini 2.5 Flash</span>
           <span class="stack-item">AP2 Protocol</span>
           <span class="stack-item">FastAPI</span>
           <span class="stack-item">SQLite</span>
@@ -1838,7 +2045,7 @@
           </svg>
         </div>
         <div class="card-header">
-          <div class="card-id">// 07</div>
+          <div class="card-id">// 09</div>
           <div class="card-status live">Running daily at 7 AM ET</div>
         </div>
         <h2 class="card-title">EDGAR 8-K Scanner</h2>
@@ -1848,10 +2055,14 @@
         <p class="card-desc">
           Pulls the prior <strong>~18 hours of 8-K filings</strong>, scores them by Item type (1.01 Material Agreement, 2.01 Acquisition, 2.02 Earnings, 5.02 Officer changes) and catalyst keyword overlap (FDA, DOD, hyperscaler counterparties, rare earths, design wins, scale terms like "billion"), then posts a ranked alert via Telegram with the ticker, the excerpt, and a <strong>directional bullish/bearish call</strong>. Runs as a Mac LaunchAgent alongside ProdAgentCo — same operational pattern, different signal.
         </p>
+        <div class="card-meta">
+          <div class="meta-label">Models</div>
+          <div class="meta-value">Claude Haiku 4.5 only. Structured 8-K filing scoring at ~$0.001 per scan — Sonnet would be overkill for matching Item types and catalyst keywords against a known taxonomy. Runs ~100 filings daily; full month of operation costs less than a coffee.</div>
+        </div>
         <div class="stack">
           <span class="stack-item">Python</span>
           <span class="stack-item">SEC EDGAR Atom</span>
-          <span class="stack-item">Claude Haiku</span>
+          <span class="stack-item">Claude Haiku 4.5</span>
           <span class="stack-item">Telegram Bot API</span>
           <span class="stack-item">Mac LaunchAgent</span>
         </div>
@@ -1880,47 +2091,47 @@
     <div class="projects-grid" id="projectsGrid">
 
       <div class="project-card reveal" data-cat="agentic consulting">
-        <div class="card-id">// 08</div>
+        <div class="card-id">// 10</div>
         <div class="pcat">Consulting Diagnostic</div>
         <h3>AI Readiness Scorecard</h3>
         <p class="pdesc">Vertical-branched 7-dimension assessment for executive prospects. Generates personalized readiness reports with engagement tier recommendation, preliminary agent strategy, and phased project roadmap. Doubles as ProdAgentCo's proposal-generator.</p>
-        <p class="pstack">Next.js · Supabase · Claude API · Tailwind · Vercel</p>
+        <p class="pstack">Next.js · Supabase · Tailwind · Vercel<br/><span style="color:var(--text-3)">Claude Sonnet 4.6 — personalized narrative reports need real reasoning; Haiku was too flat for executive output</span></p>
       </div>
 
       <div class="project-card reveal" data-cat="consumer">
-        <div class="card-id">// 09</div>
+        <div class="card-id">// 11</div>
         <div class="pcat">Consumer · Personal</div>
         <h3>The Morning Brief</h3>
         <p class="pdesc">Daily AI news dashboard built primarily for my 81-year-old father. RSS-fed for cost, Claude Haiku for synthesis, on-demand loading. Includes a dedicated Stillwater Ponies high-school sports tab as the highest-priority feed. Runs at ~$2/month.</p>
-        <p class="pstack">React TS · Express · Haiku 4.5 · RSS · Vercel</p>
+        <p class="pstack">React TS · Express · RSS · Vercel<br/><span style="color:var(--text-3)">Claude Haiku 4.5 — light news synthesis on a $2/month budget; reasoning depth would be wasted here</span></p>
       </div>
 
       <div class="project-card reveal" data-cat="health">
-        <div class="card-id">// 10</div>
+        <div class="card-id">// 12</div>
         <div class="pcat">Healthtech</div>
         <h3>Clinical Notes Generator</h3>
         <p class="pdesc">Ambient clinical documentation app. Browser MediaRecorder streams to Deepgram nova-2-medical for real-time transcription; Claude generates structured SOAP notes from the transcript. First production AI build — and a clear domain-to-AI bridge for healthtech roles.</p>
-        <p class="pstack">Next.js · Deepgram · Claude API · Vercel</p>
+        <p class="pstack">Next.js · Deepgram nova-2-medical · Vercel<br/><span style="color:var(--text-3)">Claude Sonnet 4.6 for SOAP note structuring — Haiku missed clinical nuance in early tests</span></p>
       </div>
 
       <div class="project-card reveal" data-cat="fintech agentic">
-        <div class="card-id">// 11</div>
+        <div class="card-id">// 13</div>
         <div class="pcat">Markets · Agentic</div>
         <h3>Whale Scanner</h3>
         <p class="pdesc">Real-time Polymarket whale-activity dashboard. WebSocket connection to the CLOB with 30-sec REST gap-filler, 3-layer dedup, NegRisk detection, and a 4-panel UI (live feed · top markets · volume spikes · whale wallets). Built and deployed in a single session.</p>
-        <p class="pstack">Python FastAPI · Next.js 14 · SQLite · Telegram · Railway</p>
+        <p class="pstack">Python FastAPI · Next.js 14 · SQLite · Telegram · Railway<br/><span style="color:var(--text-3)">No LLM in the hot path — pure WebSocket trade detection. Claude Haiku 4.5 only for alert summaries when fired</span></p>
       </div>
 
       <div class="project-card reveal" data-cat="fintech">
-        <div class="card-id">// 12</div>
+        <div class="card-id">// 14</div>
         <div class="pcat">Markets · Sports Analytics</div>
         <h3>Edge Scanner</h3>
         <p class="pdesc">3-agent prediction chain for NBA, NHL, and NCAAM — model probability, edge gates, fractional Kelly sizing, Brier-score grading. v3.0 caught a 5-play NHL slate with +10.2% top edge. Originally a Replit build; later wired into a MiroFish multi-agent simulation seed pipeline.</p>
-        <p class="pstack">Flask · Claude · SQLite · Replit</p>
+        <p class="pstack">Flask · SQLite · Replit<br/><span style="color:var(--text-3)">Claude Sonnet 4.6 for the 3-agent prediction chain — adversarial reasoning matters for edge calls</span></p>
       </div>
 
       <div class="project-card reveal" data-cat="consumer">
-        <div class="card-id">// 13</div>
+        <div class="card-id">// 15</div>
         <div class="pcat">Consumer · Direct Bookings</div>
         <h3>Johnson Lake House</h3>
         <p class="pdesc">A book-direct vacation rental site at johnsonlake-home.com — full SEO meta stack, Open Graph cards, tabbed gallery with lightbox, embedded map, staging branch workflow on Vercel. Optimized to win hyper-local searches the big OTAs don't bother indexing for.</p>
@@ -1928,11 +2139,11 @@
       </div>
 
       <div class="project-card reveal" data-cat="fintech">
-        <div class="card-id">// 14</div>
+        <div class="card-id">// 16</div>
         <div class="pcat">Markets · Modeling</div>
         <h3>MLB Signal Engine</h3>
         <p class="pdesc">PRD v1.2 baseball picks model — MLB Stats API, pybaseball, The Odds API, and Open-Meteo for weather signals. Adaptive feedback loop logs outcomes and adjusts signal weights, with locked-signal rules to prevent overcorrection on noise.</p>
-        <p class="pstack">Python · MLB Stats API · pybaseball · Open-Meteo · Claude</p>
+        <p class="pstack">Python · MLB Stats API · pybaseball · Open-Meteo<br/><span style="color:var(--text-3)">Claude Sonnet 4.6 for signal-weight reasoning · Haiku for fast feature extraction across game logs</span></p>
       </div>
 
     </div>
